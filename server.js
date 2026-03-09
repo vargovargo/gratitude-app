@@ -7,6 +7,44 @@ const { sendSMS, buildTwiML, validateTwilioSignature } = require('./sms');
 const { getRandomPositiveResponse, getStreakMessage } = require('./prompts');
 const { initScheduler, sendMorningPrompts, sendEveningReminders, getTodayDate } = require('./scheduler');
 
+// ─── Time helpers ─────────────────────────────────────────────────────────────
+
+const PRESET_TIMES = { '1': '08:00', '2': '09:00', '3': '07:00' };
+
+/**
+ * Parse a user-supplied time string into HH:MM (24h).
+ * Handles: "1"/"2"/"3" presets, "8am", "8:30am", "8:30", "08:30", "8", "9 pm", etc.
+ * Returns null if unparseable.
+ */
+function parseTimeInput(input) {
+  const s = input.toLowerCase().replace(/\s/g, '');
+  if (PRESET_TIMES[s]) return PRESET_TIMES[s];
+
+  const match = s.match(/^(\d{1,2})(?::(\d{2}))?(am|pm)?$/);
+  if (!match) return null;
+
+  let hours   = parseInt(match[1], 10);
+  const mins  = parseInt(match[2] || '0', 10);
+  const period = match[3];
+
+  if (hours > 23 || mins > 59) return null;
+
+  if (period === 'pm' && hours !== 12) hours += 12;
+  if (period === 'am' && hours === 12) hours = 0;
+  if (!period && hours < 6) hours += 12; // bare "8" = 8am, "1" without period = 1pm
+
+  if (hours > 23) return null;
+  return `${String(hours).padStart(2, '0')}:${String(mins).padStart(2, '0')}`;
+}
+
+/** Format "HH:MM" (24h) as "8:00 AM" for display. */
+function formatTime12h(time) {
+  const [h, m] = time.split(':').map(Number);
+  const period = h >= 12 ? 'PM' : 'AM';
+  const display = h % 12 || 12;
+  return `${display}:${String(m).padStart(2, '0')} ${period}`;
+}
+
 const app = express();
 
 // Parse both JSON bodies (admin API) and URL-encoded bodies (Twilio webhooks)
@@ -69,6 +107,24 @@ app.post('/webhook/sms', validateTwilio, async (req, res) => {
     return res.type('text/xml').send(twiml);
   }
 
+  // ── Onboarding: member hasn't set their preferred time yet ──────────────────
+  if (!member.onboarding_complete) {
+    const parsed = parseTimeInput(messageBody);
+    if (parsed) {
+      db.setPreferredTime(member.id, parsed);
+      const display = formatTime12h(parsed);
+      return res.type('text/xml').send(
+        buildTwiML(`Perfect! You'll get your daily gratitude prompt at ${display}. Can't wait to hear what you're grateful for! 🌅`)
+      );
+    } else {
+      return res.type('text/xml').send(
+        buildTwiML(
+          `Hmm, I didn't catch that! Reply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\nOr type any time like "10am" or "8:30am".`
+        )
+      );
+    }
+  }
+
   // Ensure a daily entry exists (handles edge case where morning send failed)
   db.ensureDailyEntry(member.id, date);
   const entry = db.getTodayEntry(member.id, date);
@@ -107,14 +163,24 @@ app.get('/members', requireAuth, (req, res) => {
 });
 
 // Add a new member
-app.post('/members', requireAuth, (req, res) => {
+app.post('/members', requireAuth, async (req, res) => {
   const { name, phone, timezone } = req.body;
   if (!name || !phone) {
     return res.status(400).json({ error: 'name and phone are required' });
   }
   try {
     const id = db.addMember({ name, phone, timezone });
-    res.status(201).json({ id, name, phone: db.normalizePhone(phone) });
+    const normalizedPhone = db.normalizePhone(phone);
+
+    // Send onboarding SMS asking for preferred time
+    const welcomeMsg =
+      `Welcome to the family gratitude circle, ${name}! 🌟\n\n` +
+      `When would you like your daily prompt?\n\n` +
+      `Reply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\n` +
+      `Or type any time like "10am" or "8:30am".`;
+    await sendSMS(normalizedPhone, welcomeMsg);
+
+    res.status(201).json({ id, name, phone: normalizedPhone });
   } catch (err) {
     if (err.message.includes('UNIQUE')) {
       res.status(409).json({ error: 'Phone number already registered' });

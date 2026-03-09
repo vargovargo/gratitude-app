@@ -11,7 +11,9 @@ db.exec(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     phone TEXT UNIQUE NOT NULL,
-    timezone TEXT DEFAULT 'America/New_York',
+    timezone TEXT DEFAULT 'America/Los_Angeles',
+    preferred_time TEXT NOT NULL DEFAULT '08:00',
+    onboarding_complete INTEGER DEFAULT 0,
     active INTEGER DEFAULT 1,
     created_at TEXT DEFAULT (datetime('now'))
   );
@@ -35,6 +37,11 @@ db.exec(`
   );
 `);
 
+// ─── Migrations (safe to run on existing DBs) ─────────────────────────────────
+
+try { db.prepare(`ALTER TABLE members ADD COLUMN preferred_time TEXT NOT NULL DEFAULT '08:00'`).run(); } catch {}
+try { db.prepare(`ALTER TABLE members ADD COLUMN onboarding_complete INTEGER DEFAULT 0`).run(); } catch {}
+
 // ─── Phone normalization ──────────────────────────────────────────────────────
 
 function normalizePhone(phone) {
@@ -54,7 +61,7 @@ function getAllActiveMembers() {
   return db.prepare('SELECT * FROM members WHERE active = 1 ORDER BY name').all();
 }
 
-function addMember({ name, phone, timezone = 'America/New_York' }) {
+function addMember({ name, phone, timezone = 'America/Los_Angeles' }) {
   const normalized = normalizePhone(phone);
   const result = db.prepare(
     'INSERT INTO members (name, phone, timezone) VALUES (?, ?, ?)'
@@ -66,6 +73,12 @@ function addMember({ name, phone, timezone = 'America/New_York' }) {
 
 function deactivateMember(id) {
   return db.prepare('UPDATE members SET active = 0 WHERE id = ?').run(id);
+}
+
+function setPreferredTime(memberId, time) {
+  db.prepare(
+    'UPDATE members SET preferred_time = ?, onboarding_complete = 1 WHERE id = ?'
+  ).run(time, memberId);
 }
 
 // ─── Daily entries ────────────────────────────────────────────────────────────
@@ -81,10 +94,12 @@ function createDailyEntries(date, prompt) {
   insertAll(members);
 }
 
+// Returns true if a new entry was created, false if it already existed.
 function ensureDailyEntry(memberId, date, prompt = 'Spontaneous gratitude') {
-  db.prepare(
+  const result = db.prepare(
     'INSERT OR IGNORE INTO daily_entries (member_id, date, prompt) VALUES (?, ?, ?)'
   ).run(memberId, date, prompt);
+  return result.changes > 0;
 }
 
 function getTodayEntry(memberId, date) {
@@ -193,6 +208,7 @@ module.exports = {
   getAllActiveMembers,
   addMember,
   deactivateMember,
+  setPreferredTime,
   createDailyEntries,
   ensureDailyEntry,
   getTodayEntry,

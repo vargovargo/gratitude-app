@@ -1,39 +1,18 @@
 // ─── Morning prompts ──────────────────────────────────────────────────────────
 // All family members receive the same prompt on the same day, so they can
 // share and discuss together.
+//
+// Prompts are loaded from prompts.md — edit that file to add or change prompts.
+// Each line starting with "- " is treated as a prompt.
 
-const morningPrompts = [
-  "Good morning! 🌅 What's one thing you're grateful for today?",
-  "Rise and shine! ✨ Name something that made you smile recently.",
-  "Morning! 🌸 What's a small blessing you noticed this week?",
-  "Good morning! 🌻 Who is someone you're thankful to have in your life?",
-  "Happy morning! 🌈 What's something you're looking forward to today?",
-  "Good morning! ☀️ What's a gift in your life you sometimes take for granted?",
-  "Morning! 🍃 What's something beautiful you've noticed lately?",
-  "Good morning! 💫 What's a recent moment that brought you peace?",
-  "Rise and shine! 🌺 What's something your body can do that you're grateful for?",
-  "Good morning! 🙏 What's a memory you're grateful to have?",
-  "Morning! 🌟 What challenge recently taught you something valuable?",
-  "Good morning! 🦋 What simple pleasure are you most thankful for?",
-  "Happy morning! 🌊 What's something about your home you're grateful for?",
-  "Good morning! 🎵 What skill or ability are you glad you have?",
-  "Morning! 🌙 What happened yesterday that you're grateful for?",
-  "Good morning! 🍀 Who made a positive difference in your life this week?",
-  "Rise and shine! 🌠 What's something about nature you appreciate?",
-  "Good morning! 🕊️ What kindness did someone show you lately?",
-  "Morning! 💝 What did you accomplish recently that makes you proud?",
-  "Good morning! 🌴 What opportunity are you grateful to have right now?",
-  "Happy morning! 🍵 What everyday comfort are you especially grateful for?",
-  "Good morning! 📚 What did you learn recently that enriched your life?",
-  "Morning! 🏡 What do you love most about your daily routine?",
-  "Good morning! 🤝 What friendship or relationship are you thankful for today?",
-  "Rise and shine! 🎯 What's one thing about today's fresh start you appreciate?",
-  "Good morning! 🌻 What difficulty helped you grow into who you are?",
-  "Morning! 🦋 What do you see every day but rarely stop to appreciate?",
-  "Good morning! 💎 What personal quality in yourself are you grateful for?",
-  "Happy morning! 🌈 What made you laugh this week?",
-  "Good morning! 🌅 As a new day begins, what are you most thankful for?",
-];
+const fs = require('fs');
+const path = require('path');
+
+const _promptsFile = fs.readFileSync(path.join(__dirname, 'prompts.md'), 'utf8');
+const morningPrompts = _promptsFile
+  .split('\n')
+  .filter(line => line.startsWith('- '))
+  .map(line => line.slice(2).trim());
 
 // ─── Positive response messages ───────────────────────────────────────────────
 // Sent immediately after someone submits their gratitude.
