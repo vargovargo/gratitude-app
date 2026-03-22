@@ -6,15 +6,21 @@ const client = twilio(
   process.env.TWILIO_AUTH_TOKEN
 );
 
+const messagingServiceSid = process.env.TWILIO_MESSAGING_SERVICE_SID;
 const fromNumber = process.env.TWILIO_PHONE_NUMBER;
 
 /**
  * Send an SMS message via Twilio.
+ * Uses a Messaging Service SID when TWILIO_MESSAGING_SERVICE_SID is set
+ * (required for toll-free numbers); falls back to TWILIO_PHONE_NUMBER otherwise.
  * @param {string} to   - E.164 phone number e.g. +15551234567
  * @param {string} body - Message text
  */
 async function sendSMS(to, body) {
-  const message = await client.messages.create({ body, from: fromNumber, to });
+  const params = messagingServiceSid
+    ? { body, messagingServiceSid, to }
+    : { body, from: fromNumber, to };
+  const message = await client.messages.create(params);
   console.log(`[SMS] Sent to ${to} — SID: ${message.sid}`);
   return message;
 }
