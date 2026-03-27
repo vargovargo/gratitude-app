@@ -172,6 +172,12 @@ app.post('/members', requireAuth, async (req, res) => {
     const id = db.addMember({ name, phone, timezone });
     const normalizedPhone = db.normalizePhone(phone);
 
+    // Send compliance confirmation first, then onboarding prompt
+    await sendSMS(
+      normalizedPhone,
+      "You're signed up for the Daily Gratitude SMS program! You'll get one morning prompt each day. Reply STOP anytime to unsubscribe, or HELP for assistance. Message & data rates may apply."
+    );
+
     // Send onboarding SMS asking for preferred time
     const welcomeMsg =
       `Welcome to the family gratitude circle, ${name}! 🌟\n\n` +
@@ -235,6 +241,79 @@ app.post('/send-reminders', requireAuth, async (req, res) => {
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
+});
+
+// ─── Public: Signup interest form ─────────────────────────────────────────────
+
+app.get('/signup', (req, res) => {
+  res.type('text/html').send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Gratitude Group</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 24px; color: #222; }
+    h1 { font-size: 1.4rem; margin-bottom: 0.25rem; }
+    p  { color: #555; margin-bottom: 1.5rem; line-height: 1.5; }
+    label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+    input { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1rem; }
+    button { width: 100%; padding: 12px; background: #4a7c59; color: #fff; font-size: 1rem; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #3a6349; }
+    small { display: block; margin-top: 1rem; color: #888; font-size: 0.8rem; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <h1>🌿 Join the Daily Gratitude Group</h1>
+  <p>One morning text, one gratitude question. Leave your info and a family member will reach out to get you set up.</p>
+  <form method="POST" action="/signup">
+    <label for="name">Your name</label>
+    <input type="text" id="name" name="name" required autocomplete="name" placeholder="First name is fine">
+    <label for="phone">Your cell number</label>
+    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+1 555 000 0000">
+    <button type="submit">I'm interested →</button>
+  </form>
+  <small>This is a private family program. Your number won't be added until you give verbal consent. Reply STOP anytime to opt out. Message &amp; data rates may apply.</small>
+</body>
+</html>`);
+});
+
+app.post('/signup', async (req, res) => {
+  const name  = (req.body.name  || '').trim().slice(0, 100);
+  const phone = (req.body.phone || '').trim().slice(0, 30);
+
+  if (!name || !phone) {
+    return res.status(400).type('text/html').send('<p>Name and phone are required. <a href="/signup">Go back</a></p>');
+  }
+
+  const adminPhone = process.env.ADMIN_PHONE;
+  if (adminPhone) {
+    try {
+      await sendSMS(adminPhone, `Gratitude group interest: ${name} / ${phone} — reach out for verbal consent, then add via POST /members.`);
+    } catch (err) {
+      console.error('[Signup] Failed to notify admin:', err.message);
+    }
+  } else {
+    console.log(`[Signup] Interest form submitted — Name: ${name}, Phone: ${phone} (ADMIN_PHONE not set, SMS skipped)`);
+  }
+
+  res.type('text/html').send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Got it!</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 480px; margin: 60px auto; padding: 0 24px; color: #222; text-align: center; }
+    h1 { font-size: 1.4rem; }
+    p  { color: #555; line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <h1>🌿 Got it, ${name.replace(/[<>&"]/g, '')}!</h1>
+  <p>Someone will reach out soon to get you set up. Talk to you then!</p>
+</body>
+</html>`);
 });
 
 // ─── Health check ─────────────────────────────────────────────────────────────
