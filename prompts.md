@@ -64,3 +64,25 @@ The app picks one prompt per day, cycling through the full list.
 - What's a place — anywhere in the world — that you're glad you've been to or that exists?
 - What's one thing you're looking forward to, even if it's small?
 - Who in your life makes hard things feel easier? What do you appreciate about how they show up?
+
+## Awe Reflection Prompts
+
+- Good morning! 🌌 What's the most vast or enormous thing you've ever stood in front of — ocean, mountain, canyon? What was it like?
+- Morning! 🏔️ Think of the most awe-inspiring place you've ever been. What made it feel so immense?
+- What's something in the sky — a storm, a sunset, a starry night — that has ever stopped you in your tracks?
+- Good morning! 🌊 When did you last feel the sheer scale of nature? What were you looking at?
+- Morning! 🌀 What's something beautiful or strange that genuinely surprised you recently — something that made you stop and think?
+- Good morning! ✨ What's a fact about the universe, nature, or life that still amazes you when you think about it?
+- What's something you used to take for granted that, once you really thought about it, turned out to be astonishing?
+- Morning! 🔭 Has a place, experience, or idea ever changed the way you see the world, even a little? What was it?
+- Good morning! 🌿 When did you last feel small in a way that felt good — like your worries shrank because something larger was around you?
+- Think of a moment when your everyday concerns suddenly seemed smaller. What were you seeing or experiencing?
+- Morning! 🌠 What's something so big or ancient that it made your daily life feel less heavy for a moment?
+- Good morning! 🪐 Have you ever looked at the night sky and felt your sense of self quietly shrink — in a peaceful way? What was that like?
+- Morning! 🕊️ When did you last feel genuinely connected to the world around you — nature, strangers, or something larger? What happened?
+- Good morning! 🌍 What's one thing that reminds you that you're part of something much bigger than your own life?
+- Think of a time you felt unexpected kinship with people you didn't know — at an event, in a crowd, or watching something unfold. What was it?
+- Morning! 🌱 What's something in nature — an animal, a tree, a season — that makes you feel connected to something beyond yourself?
+- Good morning! ⚡ When did you last get goosebumps from something beautiful — a piece of music, a view, a story? What was it?
+- Morning! 🫀 What's the last thing that made time feel like it slowed down — where you were just fully present? What were you doing?
+- Good morning! 😮 What's the last thing that made your jaw drop or gave you chills in a good way?
