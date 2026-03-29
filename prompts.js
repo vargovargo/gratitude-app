@@ -35,6 +35,14 @@ const positiveResponses = [
   "So thoughtful! 🎵 Your gratitude makes the world a little brighter.",
   "Fantastic! 🌿 That kind of awareness changes everything.",
   "That's the spirit! 🌻 Gratitude opens the door to more blessings.",
+  "That sounds incredible! 🌟 Thank you for sharing that moment.",
+  "What a powerful reflection! ✨ Thank you for taking time to notice that.",
+  "Wow — that's a beautiful thing to carry with you. 🌊 Thanks for sharing.",
+  "That kind of awareness is rare. 🌿 Thank you for pausing to reflect on it.",
+  "That's the kind of moment worth remembering. ✨ Thanks for bringing it here.",
+  "What a vivid memory. 🌌 That feeling you're describing is something special.",
+  "That gives me chills just reading it. 💫 Thank you for sharing that.",
+  "Something about that just stays with you, doesn't it. 🏔️ Thank you for sharing.",
 ];
 
 // ─── Evening reminder messages ────────────────────────────────────────────────
