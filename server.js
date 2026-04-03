@@ -243,6 +243,85 @@ app.post('/send-reminders', requireAuth, async (req, res) => {
   }
 });
 
+// ─── Admin: Add member form (token via query param — bookmarkable) ────────────
+
+app.get('/admin/add-member', requireAuth, (req, res) => {
+  const token = req.query.token || '';
+  const added = req.query.added || '';
+  const err   = req.query.err   || '';
+  res.type('text/html').send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Member</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 480px; margin: 40px auto; padding: 0 20px; color: #222; }
+    h1 { font-size: 1.3rem; margin-bottom: 0.25rem; }
+    p  { color: #555; margin-bottom: 1.25rem; line-height: 1.5; font-size: 0.95rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9rem; }
+    input, select { width: 100%; box-sizing: border-box; padding: 10px 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1rem; }
+    button { width: 100%; padding: 12px; background: #4a7c59; color: #fff; font-size: 1rem; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; }
+    button:active { background: #3a6349; }
+    .success { background: #e6f4ea; border: 1px solid #4a7c59; border-radius: 6px; padding: 12px 16px; margin-bottom: 1rem; color: #2d5a3d; font-weight: 600; }
+    .error   { background: #fdecea; border: 1px solid #c0392b; border-radius: 6px; padding: 12px 16px; margin-bottom: 1rem; color: #922b21; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>🌿 Add a Member</h1>
+  <p>They'll get a welcome SMS and be asked to choose their daily prompt time.</p>
+  ${added ? `<div class="success">✓ ${added.replace(/[<>&"]/g, '')} added! Welcome SMS sent.</div>` : ''}
+  ${err    ? `<div class="error">⚠ ${err.replace(/[<>&"]/g, '')}</div>` : ''}
+  <form method="POST" action="/admin/add-member?token=${encodeURIComponent(token)}">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required autocomplete="name" placeholder="First name">
+    <label for="phone">Phone number</label>
+    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+1 555 000 0000">
+    <label for="timezone">Timezone</label>
+    <select id="timezone" name="timezone">
+      <option value="America/Los_Angeles">Pacific (LA)</option>
+      <option value="America/Denver">Mountain (Denver)</option>
+      <option value="America/Chicago">Central (Chicago)</option>
+      <option value="America/New_York">Eastern (New York)</option>
+      <option value="America/Anchorage">Alaska</option>
+      <option value="Pacific/Honolulu">Hawaii</option>
+    </select>
+    <button type="submit">Add member →</button>
+  </form>
+</body>
+</html>`);
+});
+
+app.post('/admin/add-member', requireAuth, async (req, res) => {
+  const token    = req.query.token || '';
+  const name     = (req.body.name     || '').trim().slice(0, 100);
+  const phone    = (req.body.phone    || '').trim().slice(0, 30);
+  const timezone = (req.body.timezone || 'America/Los_Angeles').trim();
+
+  if (!name || !phone) {
+    return res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&err=Name+and+phone+are+required`);
+  }
+
+  try {
+    const id = db.addMember({ name, phone, timezone });
+    const normalizedPhone = db.normalizePhone(phone);
+
+    await sendSMS(
+      normalizedPhone,
+      "You're signed up for the Daily Gratitude SMS program! You'll get one morning prompt each day. Reply STOP anytime to unsubscribe, or HELP for assistance. Message & data rates may apply."
+    );
+    await sendSMS(
+      normalizedPhone,
+      `Welcome to the family gratitude circle, ${name}! 🌟\n\nWhen would you like your daily prompt?\n\nReply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\nOr type any time like "10am" or "8:30am".`
+    );
+
+    res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&added=${encodeURIComponent(name)}`);
+  } catch (err) {
+    const msg = err.message.includes('UNIQUE') ? 'That phone number is already registered' : err.message;
+    res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&err=${encodeURIComponent(msg)}`);
+  }
+});
+
 // ─── Public: Signup interest form ─────────────────────────────────────────────
 
 app.get('/signup', (req, res) => {
