@@ -1,7 +1,10 @@
 const Database = require('better-sqlite3');
 const path = require('path');
+const fs = require('fs');
 
-const db = new Database(path.join(__dirname, 'gratitude.db'));
+const dbPath = process.env.DB_PATH || path.join(__dirname, 'gratitude.db');
+fs.mkdirSync(path.dirname(dbPath), { recursive: true });
+const db = new Database(dbPath);
 
 // Enable WAL mode for better concurrent performance
 db.pragma('journal_mode = WAL');
