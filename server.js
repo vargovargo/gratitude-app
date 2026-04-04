@@ -196,6 +196,16 @@ app.post('/members', requireAuth, async (req, res) => {
   }
 });
 
+// Update a member's timezone and/or preferred_time
+app.patch('/members/:id', requireAuth, (req, res) => {
+  const { timezone, preferred_time } = req.body;
+  if (!timezone && !preferred_time) {
+    return res.status(400).json({ error: 'timezone or preferred_time required' });
+  }
+  db.updateMember(parseInt(req.params.id), { timezone, preferred_time });
+  res.json({ success: true });
+});
+
 // Deactivate a member (soft delete)
 app.delete('/members/:id', requireAuth, (req, res) => {
   db.deactivateMember(req.params.id);

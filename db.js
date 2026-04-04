@@ -74,6 +74,16 @@ function addMember({ name, phone, timezone = 'America/Los_Angeles' }) {
   return result.lastInsertRowid;
 }
 
+function updateMember(id, { timezone, preferred_time }) {
+  if (timezone && preferred_time) {
+    db.prepare('UPDATE members SET timezone = ?, preferred_time = ? WHERE id = ?').run(timezone, preferred_time, id);
+  } else if (timezone) {
+    db.prepare('UPDATE members SET timezone = ? WHERE id = ?').run(timezone, id);
+  } else if (preferred_time) {
+    db.prepare('UPDATE members SET preferred_time = ? WHERE id = ?').run(preferred_time, id);
+  }
+}
+
 function deactivateMember(id) {
   return db.prepare('UPDATE members SET active = 0 WHERE id = ?').run(id);
 }
@@ -210,6 +220,7 @@ module.exports = {
   getMemberByPhone,
   getAllActiveMembers,
   addMember,
+  updateMember,
   deactivateMember,
   setPreferredTime,
   createDailyEntries,
