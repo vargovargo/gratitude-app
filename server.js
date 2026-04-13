@@ -4,7 +4,7 @@ const twilio  = require('twilio');
 
 const db = require('./db');
 const { sendSMS, buildTwiML, validateTwilioSignature } = require('./sms');
-const { getRandomPositiveResponse, getStreakMessage } = require('./prompts');
+const { getRandomPositiveResponse, getPromptPairedResponse, getShortResponseNudge, getStreakMessage } = require('./prompts');
 const { initScheduler, sendMorningPrompts, sendEveningReminders, getTodayDate } = require('./scheduler');
 
 // ─── Time helpers ─────────────────────────────────────────────────────────────
@@ -138,8 +138,16 @@ app.post('/webhook/sms', validateTwilio, async (req, res) => {
   const updatedStreak = db.updateStreak(member.id, date);
   const streakCount   = updatedStreak?.current_streak ?? 1;
 
-  // Build an encouraging reply
-  let reply = getRandomPositiveResponse();
+  // Build an encouraging reply, paired to the type of gratitude the prompt invited
+  let reply = getPromptPairedResponse(entry.prompt);
+
+  // For very short replies (≤ 3 words), 50% chance to append a gentle nudge
+  // inviting more detail. Combine if it fits; otherwise show nudge alone.
+  if (!alreadyResponded && messageBody.trim().split(/\s+/).length <= 3 && Math.random() < 0.5) {
+    const nudge = getShortResponseNudge();
+    const combined = reply + '\n\n' + nudge;
+    reply = combined.length <= 320 ? combined : nudge;
+  }
 
   if (!alreadyResponded) {
     const milestone = getStreakMessage(streakCount);
