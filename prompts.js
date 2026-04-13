@@ -169,29 +169,29 @@ const promptThemeMap = {
 
 const themedResponses = {
   awe: [
-    "That kind of wonder is doing real work. Dacher Keltner's research at UC Berkeley found that awe lowers inflammatory markers in the body — wonder is genuinely good for your health. 🌌",
+    "That kind of wonder is doing real work. Dacher Keltner's lab at UC Berkeley found that awe — more than any other positive emotion they measured — was linked to lower inflammatory markers in the body. 🌌",
     "Awe is one of the rarest emotions — and one of the most healing. Studies show it shrinks self-focused worry and connects us to something larger than our daily concerns. 🌠",
-    "Research shows awe expands our felt sense of time and makes us less rushed. You just gave yourself a small dose of one of the most studied wellbeing boosters in positive psychology. ✨",
+    "Research by Melanie Rudd (2012, Psychological Science) found that awe literally expands our felt sense of time — people who felt awe reported feeling less rushed and more present. ✨",
   ],
   nature: [
-    "Noticing nature's beauty is more powerful than it sounds. Researcher Ming Kuo found even brief attention to natural settings measurably restores focus and calms the nervous system. 🌿",
-    "Nature connectedness — the felt sense of belonging to the natural world — is one of the strongest predictors of life satisfaction in recent wellbeing research. You're building that. 🌸",
-    "Studies show that mentally dwelling on a natural scene activates the same restorative processes as being there. That image in your mind is doing something real. 🌲",
+    "Noticing nature's beauty is more powerful than it sounds. Frances Ming Kuo's research found that even brief access to natural settings measurably restores directed attention and reduces stress markers. 🌿",
+    "Nature connectedness consistently predicts life satisfaction and wellbeing across dozens of studies worldwide — the felt sense of belonging to the natural world is genuinely good for you. 🌸",
+    "Research shows that even viewing natural scenes can restore attentional capacity — and genuinely noticing nature in the real world carries even stronger benefits. 🌲",
   ],
   relationships: [
     "Calling someone specific to mind deepens the effect. Harvard's 85-year study on adult development found relationships are the single greatest predictor of health and happiness across a lifetime. 💛",
-    "Gratitude for people — more than for things — produces the strongest wellbeing benefits. Research shows it activates the brain's social-bonding and reward circuits at the same time. 🤝",
-    "Studies show that mentally 'visiting' someone you love triggers the same neural warmth as being with them. This small moment of gratitude just lit up your social brain. 🌻",
+    "Sara Algoe's 'find, remind, and bind' theory shows that gratitude toward specific people strengthens those relationships more powerfully than general thankfulness — and the evidence supports it. 🤝",
+    "Research consistently shows that gratitude focused on people — rather than things or circumstances — produces the strongest and most lasting wellbeing benefits. 🌻",
   ],
   resilience: [
-    "Finding what difficulty gave you is called benefit-finding — one of the most potent tools in resilience research. Tedeschi & Calhoun found it predicts lasting psychological growth. 💪",
+    "Reflecting on what difficulty gave you is at the heart of post-traumatic growth research. Tedeschi & Calhoun found that finding meaning in hard experiences — not just recovering from them — predicts the deepest long-term psychological gains. 💪",
     "Studies show that reflecting on what hard times taught us — not just surviving them — is linked to lower depression and higher life satisfaction long-term. You just did that. 🌱",
-    "Post-traumatic growth research found that meaning-making from hard experiences changes the brain's relationship to future stress. This reflection is quietly protective. 🔥",
+    "Post-traumatic growth research shows that meaning-making from adversity is one of the strongest predictors of resilience and psychological flourishing after difficulty. 🔥",
   ],
   body: [
-    "Gratitude for what your body *does* — rather than how it looks — is linked to lower health anxiety and better body image in multiple studies. This is a different and powerful lens. 💪",
-    "Research on interoception (awareness of the body from within) shows that tuning in with appreciation activates the parasympathetic nervous system — a genuine calming effect. 🌺",
-    "Studies on body appreciation find it's one of the most stable predictors of positive body image and overall wellbeing, far more than appearance-based measures. 🌿",
+    "Gratitude for what your body *does* — rather than how it looks — is linked to lower health anxiety and better body image across multiple studies (Tracy Tylka's body appreciation research). 💪",
+    "Research links gratitude practice to increased heart rate variability — a marker of parasympathetic activity — and reduced stress hormones. Noticing your body's gifts is part of that. 🌺",
+    "Tracy Tylka's research on body appreciation found that gratitude for your body's capabilities — strength, senses, movement — is one of the most stable predictors of positive body image and wellbeing. 🌿",
   ],
   simple_pleasures: [
     "Pausing to notice everyday pleasures is the core of 'savoring,' studied by psychologist Fred Bryant. Research shows savoring small moments amplifies positive emotions far more than big, infrequent highs. ✨",
@@ -200,28 +200,28 @@ const themedResponses = {
   ],
   creativity: [
     "Engaging with art, music, or stories activates the brain's default mode network — the same system involved in meaning-making and self-understanding. Reflecting on it extends that benefit. 🎵",
-    "A large UCL study by Fancourt & Finn found that regular arts engagement significantly reduces cortisol and prolongs positive affect — even recalling a meaningful work has this effect. 🎶",
-    "Research on 'aesthetic chills' — the goosebumps response to art you love — shows it triggers the same dopamine reward pathway as food and social connection. You tapped into something real. 🌟",
+    "A WHO scoping review by Fancourt & Finn (2019) — covering over 3,000 studies — found arts engagement consistently associated with reduced depression, lower cortisol, and stronger positive affect. 🎶",
+    "Salimpoor et al. (2011, Nature Neuroscience) found that peak emotional responses to music trigger dopamine release in the brain's reward system — the same pathway activated by food and social connection. 🌟",
   ],
   memory: [
-    "Researchers studying nostalgia (led by Constantine Sedikides) found that positive memories consistently increase feelings of meaning, social connectedness, and optimism. 🌿",
+    "Researchers studying nostalgia (led by Constantine Sedikides at Southampton) found that nostalgic reflection consistently increases feelings of meaning, social connectedness, and optimism. 🌿",
     "Reflecting on formative memories strengthens what psychologists call 'narrative identity' — the story of who you are — which is closely tied to resilience and wellbeing. 🕊️",
-    "Studies show that revisiting meaningful memories activates the same emotional pathways as the original experience, giving you a real, if brief, dose of what that time gave you. 🌅",
+    "Sedikides & Wildschut's nostalgia research found that revisiting meaningful memories reduces loneliness, bolsters self-continuity, and increases meaning in life — effects replicated across cultures. 🌅",
   ],
   kindness: [
-    "Recalling acts of kindness — given or received — is one of the most reliable wellbeing boosters in positive psychology. Sonja Lyubomirsky found it outperforms many other practices. 💛",
-    "Researcher Keiko Otake found that simply *counting* kind acts you've done raises happiness — not just doing them. You just counted one. That matters. 🌸",
-    "Studies show that reflecting on kindness given or received activates the brain's caregiving system, which produces warmth and reduces stress hormones. 🤝",
+    "Recalling kind acts you've done improves wellbeing. Research by Ko, Margolis, Revord & Lyubomirsky (2021) found that remembering past kindness was just as effective a boost as performing new acts. 💛",
+    "Keiko Otake's research found that simply *counting* kind acts for one week raised happiness levels — not just doing them, but noticing them. You just noticed one. 🌸",
+    "Sonja Lyubomirsky's positive activity research consistently finds that kindness-based interventions — performing or recalling kind acts — are among the most reliable wellbeing boosters in the field. 🤝",
   ],
   hope: [
     "Looking forward to something — even something small — activates the brain's dopamine reward system, which motivates action and builds positive mood. Anticipation is its own form of joy. 🌈",
-    "Rick Snyder's hope theory found that having even small, concrete things to look forward to is a strong predictor of resilience and recovery from setbacks. 🌟",
-    "Research on 'anticipatory savoring' shows that mentally dwelling on a future positive event generates positive emotion now — your brain doesn't wait for it to happen. 🌻",
+    "Rick Snyder's hope theory found that goal-directed thinking — having something meaningful to work toward and believing you can get there — is a strong predictor of resilience and recovery from setbacks. 🌟",
+    "Fred Bryant's research on 'anticipatory savoring' shows that mentally dwelling on a future positive event generates real positive emotion now — your brain doesn't wait for it to happen. 🌻",
   ],
   accomplishment: [
-    "Noticing how you've grown is what researchers call 'growth tracking,' and studies show it predicts life satisfaction more reliably than listing achievements. You're doing it right. 💪",
-    "Martin Seligman's PERMA model identifies accomplishment as one of five pillars of wellbeing — and research shows *recognizing* growth matters as much as the growth itself. 🌟",
-    "Studies on self-efficacy (Bandura) found that looking back on capability you've built is one of the most powerful sources of confidence going forward. 🎯",
+    "Albert Bandura's self-efficacy research identified 'mastery experiences' — looking back on capabilities you've built — as the single most powerful source of ongoing confidence. 💪",
+    "Martin Seligman's PERMA model identifies accomplishment as one of five pillars of flourishing — and recognizing your own capabilities is central to how this pillar actually supports wellbeing. 🌟",
+    "Carol Dweck's research found that noticing how you've grown — recognizing that abilities develop through effort — is the foundation of a growth mindset, which predicts resilience and sustained motivation. 🎯",
   ],
 };
 
