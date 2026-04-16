@@ -3,7 +3,14 @@ const db = require('./db');
 const { sendSMS } = require('./sms');
 const { getDailyPrompt, getRandomReminder } = require('./prompts');
 
-const REMINDER_INACTIVE_DAYS = parseInt(process.env.REMINDER_INACTIVE_DAYS || '7', 10);
+const REMINDER_PAUSE_DAYS = parseInt(process.env.REMINDER_PAUSE_DAYS || '7',  10);
+const MESSAGE_PAUSE_DAYS  = parseInt(process.env.MESSAGE_PAUSE_DAYS  || '10', 10);
+
+function daysSinceActive(member) {
+  const streak = db.getStreak(member.id);
+  const ref = streak?.last_response_date ?? member.created_at.slice(0, 10);
+  return Math.floor((Date.now() - new Date(ref)) / 86400000);
+}
 
 /**
  * Returns today's date string (YYYY-MM-DD) in the configured timezone.
@@ -38,6 +45,7 @@ async function checkAndSendPrompts() {
 
   for (const member of members) {
     if (!member.onboarding_complete) continue;
+    if (daysSinceActive(member) > MESSAGE_PAUSE_DAYS) continue;
 
     // Get current HH:MM in this member's timezone
     const memberTime = now.toLocaleTimeString('en-US', {
@@ -68,7 +76,9 @@ async function sendMorningPrompts() {
   console.log(`[Scheduler] Morning prompts — date: ${date}`);
   console.log(`[Scheduler] Prompt: "${prompt}"`);
 
-  const members = db.getAllActiveMembers().filter((m) => m.onboarding_complete);
+  const members = db.getAllActiveMembers()
+    .filter((m) => m.onboarding_complete)
+    .filter((m) => daysSinceActive(m) <= MESSAGE_PAUSE_DAYS);
   if (members.length === 0) {
     console.log('[Scheduler] No active members to message.');
     return;
@@ -92,13 +102,9 @@ async function sendMorningPrompts() {
 async function sendEveningReminders() {
   const date = getTodayDate();
   const pending = db.getPendingMembers(date);
-  const unreminded = pending.filter((m) => {
-    if (m.reminded) return false;
-    const streak = db.getStreak(m.id);
-    if (!streak?.last_response_date) return false;
-    const daysSince = Math.floor((Date.now() - new Date(streak.last_response_date)) / 86400000);
-    return daysSince <= REMINDER_INACTIVE_DAYS;
-  });
+  const unreminded = pending.filter(
+    (m) => !m.reminded && daysSinceActive(m) <= REMINDER_PAUSE_DAYS
+  );
 
   console.log(`[Scheduler] Evening reminders — ${unreminded.length} pending members`);
 
