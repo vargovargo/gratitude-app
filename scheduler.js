@@ -3,6 +3,8 @@ const db = require('./db');
 const { sendSMS } = require('./sms');
 const { getDailyPrompt, getRandomReminder } = require('./prompts');
 
+const REMINDER_INACTIVE_DAYS = parseInt(process.env.REMINDER_INACTIVE_DAYS || '7', 10);
+
 /**
  * Returns today's date string (YYYY-MM-DD) in the configured timezone.
  */
@@ -90,7 +92,13 @@ async function sendMorningPrompts() {
 async function sendEveningReminders() {
   const date = getTodayDate();
   const pending = db.getPendingMembers(date);
-  const unreminded = pending.filter((m) => !m.reminded);
+  const unreminded = pending.filter((m) => {
+    if (m.reminded) return false;
+    const streak = db.getStreak(m.id);
+    if (!streak?.last_response_date) return false;
+    const daysSince = Math.floor((Date.now() - new Date(streak.last_response_date)) / 86400000);
+    return daysSince <= REMINDER_INACTIVE_DAYS;
+  });
 
   console.log(`[Scheduler] Evening reminders — ${unreminded.length} pending members`);
 
