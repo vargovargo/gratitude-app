@@ -3,7 +3,7 @@ const express = require('express');
 const twilio  = require('twilio');
 
 const db = require('./db');
-const { sendSMS, buildTwiML, validateTwilioSignature } = require('./sms');
+const { sendSMS, sendWelcomeSMS, buildTwiML, validateTwilioSignature } = require('./sms');
 const { getRandomPositiveResponse, getPromptPairedResponse, getShortResponseNudge, getStreakMessage } = require('./prompts');
 const { initScheduler, sendMorningPrompts, sendEveningReminders, getTodayDate } = require('./scheduler');
 
@@ -153,8 +153,6 @@ app.post('/webhook/sms', validateTwilio, async (req, res) => {
     const milestone = getStreakMessage(streakCount);
     if (milestone) {
       reply += `\n\n${milestone}`;
-    } else if (streakCount > 1) {
-      reply += `\n\n🔥 ${streakCount}-day streak — keep it going!`;
     }
   } else {
     reply = "Thanks for the extra gratitude! 🌟 Your positive energy is contagious!";
@@ -180,19 +178,7 @@ app.post('/members', requireAuth, async (req, res) => {
     const id = db.addMember({ name, phone, timezone });
     const normalizedPhone = db.normalizePhone(phone);
 
-    // Send compliance confirmation first, then onboarding prompt
-    await sendSMS(
-      normalizedPhone,
-      "You're signed up for the Daily Gratitude SMS program! You'll get one morning prompt each day. Reply STOP anytime to unsubscribe, or HELP for assistance. Message & data rates may apply."
-    );
-
-    // Send onboarding SMS asking for preferred time
-    const welcomeMsg =
-      `Welcome to the family gratitude circle, ${name}! 🌟\n\n` +
-      `When would you like your daily prompt?\n\n` +
-      `Reply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\n` +
-      `Or type any time like "10am" or "8:30am".`;
-    await sendSMS(normalizedPhone, welcomeMsg);
+    await sendWelcomeSMS(normalizedPhone, name);
 
     res.status(201).json({ id, name, phone: normalizedPhone });
   } catch (err) {
@@ -324,14 +310,7 @@ app.post('/admin/add-member', requireAuth, async (req, res) => {
     const id = db.addMember({ name, phone, timezone });
     const normalizedPhone = db.normalizePhone(phone);
 
-    await sendSMS(
-      normalizedPhone,
-      "You're signed up for the Daily Gratitude SMS program! You'll get one morning prompt each day. Reply STOP anytime to unsubscribe, or HELP for assistance. Message & data rates may apply."
-    );
-    await sendSMS(
-      normalizedPhone,
-      `Welcome to the family gratitude circle, ${name}! 🌟\n\nWhen would you like your daily prompt?\n\nReply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\nOr type any time like "10am" or "8:30am".`
-    );
+    await sendWelcomeSMS(normalizedPhone, name);
 
     res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&added=${encodeURIComponent(name)}`);
   } catch (err) {

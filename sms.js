@@ -38,4 +38,16 @@ function validateTwilioSignature(authToken, signature, url, params) {
   return twilio.validateRequest(authToken, signature, url, params);
 }
 
-module.exports = { sendSMS, buildTwiML, validateTwilioSignature };
+/**
+ * Send the combined compliance + onboarding welcome message to a new member.
+ * Merges what was previously two separate SMS sends into one to save segments.
+ */
+async function sendWelcomeSMS(phone, name) {
+  const body =
+    `Hi ${name}! You're signed up for Daily Gratitude - one morning prompt each day. ` +
+    `When would you like it? Reply 1=8am, 2=9am, 3=7am or any time like "10am". ` +
+    `Reply STOP to unsubscribe. Msg & data rates may apply.`;
+  return sendSMS(phone, body);
+}
+
+module.exports = { sendSMS, sendWelcomeSMS, buildTwiML, validateTwilioSignature };
