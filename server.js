@@ -289,6 +289,7 @@ app.get('/admin/add-member', requireAuth, (req, res) => {
       <option value="America/New_York">Eastern (New York)</option>
       <option value="America/Anchorage">Alaska</option>
       <option value="Pacific/Honolulu">Hawaii</option>
+      <option value="Europe/London">UK (London)</option>
     </select>
     <button type="submit">Add member →</button>
   </form>
