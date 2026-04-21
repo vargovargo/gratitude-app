@@ -307,16 +307,46 @@ const shortResponseNudges = [
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
+// Fixed start date for the prompt cycle. Change PROMPT_EPOCH env var on Railway
+// to shift the sequence without a code redeploy (useful after adding prompts).
+const PROMPT_EPOCH = process.env.PROMPT_EPOCH || '2026-01-01';
+
+function seededRandom(seed) {
+  let s = seed >>> 0;
+  return function () {
+    s = (s + 0x6D2B79F5) >>> 0;
+    let t = Math.imul(s ^ (s >>> 15), 1 | s);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function seededShuffle(arr, seed) {
+  const rand = seededRandom(seed);
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(rand() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 /**
- * Returns the same prompt for everyone on a given date, cycling through the list.
+ * Returns the same prompt for everyone on a given date.
+ * Uses a fixed epoch + per-cycle seeded shuffle so the order varies each
+ * pass through the list and the sequence never resets at New Year.
  * @param {string} dateStr - YYYY-MM-DD
  */
 function getDailyPrompt(dateStr) {
-  const [year, month, day] = dateStr.split('-').map(Number);
-  const start = new Date(year, 0, 0);
-  const now = new Date(year, month - 1, day);
-  const dayOfYear = Math.round((now - start) / (1000 * 60 * 60 * 24));
-  return morningPrompts[dayOfYear % morningPrompts.length];
+  const epoch = new Date(PROMPT_EPOCH + 'T12:00:00');
+  const today = new Date(dateStr + 'T12:00:00');
+  const totalDays = Math.round((today - epoch) / (1000 * 60 * 60 * 24));
+
+  const cycleLen   = morningPrompts.length;
+  const cycleNum   = Math.floor(totalDays / cycleLen);
+  const posInCycle = totalDays % cycleLen;
+
+  return seededShuffle(morningPrompts, cycleNum)[posInCycle];
 }
 
 function getRandomPositiveResponse() {
