@@ -96,16 +96,14 @@ app.post('/webhook/sms', validateTwilio, async (req, res) => {
   const messageBody = (req.body.Body || '').trim();
   const date        = getTodayDate();
 
-  console.log(`[Webhook] SMS from ${fromPhone}: "${messageBody}"`);
-
-  // Look up the sender
+  // Look up the sender before logging message content
   const member = db.getMemberByPhone(fromPhone);
   if (!member) {
-    const twiml = buildTwiML(
-      "Hi! I don't recognize this number. Ask a family member to add you to the gratitude group! 🌸"
-    );
-    return res.type('text/xml').send(twiml);
+    console.log(`[Webhook] SMS from unrecognized number ${fromPhone} — ignored`);
+    return res.type('text/xml').send('<Response></Response>');
   }
+
+  console.log(`[Webhook] SMS from ${fromPhone}: "${messageBody}"`);
 
   // ── Onboarding: member hasn't set their preferred time yet ──────────────────
   if (!member.onboarding_complete) {
