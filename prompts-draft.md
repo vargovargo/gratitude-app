@@ -16,13 +16,13 @@ When ready, let me know and I'll integrate into `prompts.md` and `promptThemeMap
 - Good morning! 🍳 What's the last meal you made that you were genuinely pleased with?
 - What's something you read, watched, or listened to recently that was just... enjoyable?
 - Morning! 🛋️ What's your favorite spot in your home, and what do you love about it?
-- What's a small kindness you do for yourself regularly that makes your day a bit easier?
-- Good morning! 🌇 What's something about the time of day you like most — morning, afternoon, or evening?
-- What's a color, plant, or object in your everyday environment that quietly pleases you?
+- What's a small thing you do for yourself regularly that makes your day a bit easier?
+- Look up from your phone for a moment. What's the first thing you see that you're glad exists?
+- What's something you walk past every day that you've stopped noticing but would miss if it were gone?
 - Morning! ☕ What's something you eat or drink that you genuinely look forward to each day?
 - What's a chore or task you actually find a little satisfying to do?
 - Good morning! 🎶 What's something you enjoy doing when you have a few unexpected free minutes?
-- What's a comfortable piece of clothing you're grateful to own?
+- What's something about your everyday surroundings that you've never once thought to be grateful for, but which is quietly good?
 - Morning! 🌬️ When did you last step outside and just notice something pleasant about the air, the light, or the quiet?
 - What's something around your home that makes you smile when you see it?
 - Good morning! 🏡 What's one way your living space supports you that you rarely stop to notice?
@@ -34,378 +34,390 @@ When ready, let me know and I'll integrate into `prompts.md` and `promptThemeMap
 - Morning! 📖 What's something you read recently — a book, an article, even a caption — that stuck with you in a good way?
 - What's a piece of technology that quietly makes your life better in ways you rarely acknowledge?
 - Good morning! 🛁 What's a small comfort that helps you recharge or unwind?
-- What's something about your daily commute or routine journey that you've found to appreciate, even slightly?
-- Morning! 🌅 What's the smallest thing that made yesterday just a little bit better?
+- What's a small pleasure you've had in the last 24 hours that you've already moved past without fully registering?
+- What's something you have access to today — a place, a person, a comfort — that you'd feel the absence of immediately if it were gone?
+
 
 ## relationships
 
-- Good morning! 💌 Who's someone you haven't spoken to in a while, but whose friendship you still treasure?
-- Think of someone who always seems to know the right thing to say. What do you appreciate about how they communicate?
-- Morning! 🤗 Who in your life makes you feel most like yourself?
-- Who taught you something — formally or informally — that you still carry with you?
-- Good morning! 👨‍👩‍👧 What's something you appreciate about your family that you don't often put into words?
-- Who is someone you admire from a distance — a colleague, neighbor, or acquaintance — and what do you value about them?
-- Morning! 💛 Think of a friendship that has grown stronger over time. What has made it last?
-- Who showed you what it looks like to work hard at something? What are you grateful to have learned from watching them?
-- Good morning! 🤝 Who is someone who has forgiven you or given you grace when you needed it?
-- Think of a time someone checked in on you unexpectedly. Who was it and what did it mean to you?
-- Morning! 🌻 Who in your life consistently makes you laugh? What's one thing you love about them?
-- Who is someone whose different perspective has expanded how you see the world?
-- Good morning! 📞 Who's someone you could call right now if you really needed to talk?
-- Think of a relationship that required effort to maintain. What do you appreciate about having put in that work?
-- Morning! 🌸 Who in your life brings calm when things feel chaotic?
-- Think of someone who has pushed you to be better — in a way you're grateful for, even if it was uncomfortable at the time.
-- Good morning! 💝 What's a gesture of love or care someone has shown you recently that you haven't fully acknowledged?
-- Who is someone who accepted you as you were before you figured yourself out?
-- Morning! 🫂 Who do you feel most comfortable being vulnerable with?
-- Think of a relationship that surprised you — one that grew deeper than you expected. What do you value about it?
-- Good morning! 👴 Who in an older generation shaped who you are? What's one thing you've inherited from them?
-- Who is someone whose enthusiasm for something — anything — is genuinely contagious?
-- Morning! 🌟 Think of a time someone stood up for you or advocated for you. Who was it?
-- Who is someone who has been a steady presence in your life without making a big deal of it?
-- Good morning! 🤲 Who helped you through a genuinely hard time? What did they do that mattered most?
-- Think of a friendship that started unexpectedly. How did it happen and what do you appreciate about it?
-- Morning! 🌼 Who in your life expresses care in quiet, practical ways that you don't always notice?
-- What relationship in your life has taught you the most about yourself?
+- Think of someone you spoke to yesterday — even briefly. What did you appreciate about that exchange?
+- Who's someone you could call right now if you really needed to? What does it mean to have that?
+- Good morning! 💬 What's something a specific person in your life has said that you still think about?
+- Who checked in on you recently — in any way — that you haven't fully acknowledged, even to yourself?
+- Morning! 🤝 What's one relationship in your life that costs you very little but gives you a lot?
+- Think of someone you've known for a long time. What's one thing you know about them now that you didn't at first?
+- Who in your life is easy to be around? What makes them that way?
+- Good morning! What's something someone did for you in the last week — even something small — that you haven't said thank you for?
+- Morning! Is there someone in your life who's been more patient with you than you deserved? Who, and when?
+- Think of a friendship that's changed over the years but is still there. What's kept it going?
+- Who do you feel genuinely seen by? What does that feel like?
+- Good morning! 👋 Who's someone on the edges of your life — a neighbor, a regular at a place you go — that you'd notice the absence of?
+- Morning! What's something a family member taught you, by example, that you still carry?
+- Think of the last time you laughed with someone. Who was it and what made it funny?
+- Good morning! Who's someone you've drifted from but would still show up for? What does that say about the relationship?
+- Morning! 🌱 What's a relationship that's grown or deepened in the last year or two?
+- Who gave you honest feedback when you needed it, even if it was uncomfortable? What did that cost them?
+- Good morning! What's one way someone in your life makes ordinary tasks or days easier without making a big deal of it?
+- Morning! Think of a person you admire. What specifically do you admire — a quality, a decision, a habit?
+- Who have you forgiven, or been forgiven by, in a way that changed how you think about the relationship?
+- Good morning! 🫂 What's something you've been meaning to say to someone — appreciation, acknowledgment, anything — that you've kept putting off?
+- Morning! Who's someone you're glad came into your life unexpectedly?
+- Think of someone who showed up for you during a hard time. What specifically did they do?
+- Good morning! What's one relationship in your life that's better now than it was a year ago? What changed?
+- Morning! Who is someone in your life that doesn't get enough credit for what they do?
+- Think of the last time someone made you feel genuinely welcomed or included. Who was it?
+- Good morning! 🌟 What's something you genuinely like about someone you find difficult?
+- Morning! Who's someone you'd describe as generous — not just with money, but with time, attention, or patience?
+
 
 ## resilience
 
-- Good morning! 🔥 What's something you once thought you couldn't handle — but did?
-- Think of a time you kept going when you wanted to stop. What carried you through?
-- Morning! 🌱 What's a setback that, looking back, redirected you somewhere better?
-- What's the hardest thing you've done that you're quietly proud of?
-- Good morning! 💪 Who or what gave you strength during the most difficult period of your life?
-- Think of something you failed at before you succeeded. What did the failure give you?
-- Morning! 🧱 What's something you've rebuilt — a relationship, a habit, a sense of self — after it fell apart?
-- What's a belief about yourself that a hard experience proved wrong — in a good way?
-- Good morning! 🌊 What's the most uncertain period you've come through? What does having survived it tell you about yourself?
-- Think of a time you had to ask for help. What did that take, and what did it give you?
-- Morning! 🕯️ What's something you now know about yourself that you only discovered through difficulty?
-- Think of a time things didn't go as planned and it turned out okay anyway. What happened?
-- Good morning! 🪨 What's something about your character — your stubbornness, your sensitivity, your patience — that has been a strength when you needed it?
-- What's something you survived that you wouldn't wish on anyone, but that gave you something you wouldn't trade?
-- Morning! 🌤️ After a hard chapter in your life, what was the first small sign that things were getting better?
-- What's a piece of advice you gave yourself — or received — that actually helped when you were struggling?
-- Good morning! 🛤️ What detour in your life turned into a path worth taking?
-- Think of someone who believed you could handle something hard before you believed it yourself.
-- Morning! 🌿 What has changed about the way you handle difficulty now compared to five years ago?
-- What's something you let go of — a job, a relationship, an expectation — that freed you?
-- Good morning! ⚡ What's a moment you surprised yourself with how you responded to something difficult?
-- Think of a time you had to start over. What did you bring with you from what came before?
-- Morning! 🏔️ What's the most useful thing hardship has taught you about what actually matters?
-- What's a fear you've faced — even partially — that no longer has the same hold on you?
-- Good morning! 🦋 What version of yourself from five years ago would be surprised by something you've managed to do or become?
-- Think of the last time you felt genuinely overwhelmed. What helped you find your footing again?
-- Morning! 🌅 What's something about the way you've coped with difficulty that you think has been underestimated — by yourself or others?
-- What's a moment of recovery — big or small — that you're proud of, even if no one else saw it?
+- Think of something hard you've already gotten through. What did you find out about yourself from it?
+- What's something you handled in the last month that you weren't sure you could?
+- Good morning! What's a worry you had six months ago that turned out okay — or that you've just learned to live with?
+- Morning! What's one small thing you did yesterday that took more effort than it looked?
+- Think of a time you asked for help when it wasn't easy to. What happened?
+- Good morning! What's something you used to struggle with that's easier now — even slightly?
+- What's a skill or capacity you have today that came from going through something difficult?
+- Morning! 💪 What's something you kept showing up for even when you didn't feel like it?
+- Think of a setback that ended up pointing you in a better direction. What did that look like?
+- Good morning! What's something you've adapted to that you didn't think you could adapt to?
+- Morning! What's a belief you've let go of — about yourself or the world — that was actually weighing you down?
+- What's a time you surprised yourself — not with a triumph, just by getting through something?
+- Good morning! Who or what helped you get through a hard stretch? What did that support actually look like?
+- Morning! What's something you've rebuilt — a habit, a relationship, a routine — after it broke down?
+- Think of a hard decision you made that you weren't sure about at the time. What do you know now?
+- Good morning! What's something you've been dealing with that you're handling better than you might be giving yourself credit for?
+- Morning! 🌤️ What's a hard thing that, looking back, gave you something you wouldn't trade?
+- What's a problem you've been sitting with for a while that's actually gotten smaller without you fully noticing?
+- Good morning! What's one way your life is more manageable now than it was a year or two ago?
+- Morning! Think of a time you kept your word to yourself about something hard. What was it?
+- What's something you've stopped doing — a habit, a relationship, a pattern — that made things better?
+- Good morning! What's a piece of hard-won knowledge you'd tell a younger version of yourself?
+- Morning! What's an obstacle in your life right now that you're actually making progress on, even if it's slow?
+- Think of something you failed at but tried again. What made you try again?
+- Good morning! What's something you're carrying right now that you've been carrying longer than you realized — and you're still standing?
+- Morning! 🔧 What's a practical skill or resource you have that you built up over time without fully noticing?
+- What's a time you changed your mind about something important? What shifted?
+- Good morning! What's something you've made peace with that used to take up more of your energy?
+
 
 ## body
 
-- Good morning! 💨 What's something your lungs, heart, or circulatory system did quietly for you yesterday while you weren't thinking about it?
-- Think of something physical your body has recovered from — an illness, an injury, exertion. What do you appreciate about that recovery?
-- Morning! 👁️ What's something beautiful you were able to see recently that you're glad your eyes let you take in?
-- What's a physical sensation you love — warmth, a breeze, the feeling after a walk — that you take for granted?
-- Good morning! 🧠 What's something your brain helped you figure out or learn recently that you hadn't expected?
-- Think of a physical skill — cooking, driving, playing an instrument, typing — that took time to build and now you barely notice.
-- Morning! 🦵 What did your body carry you through yesterday? Even just getting from place to place.
-- What's something your hands have made, fixed, written, or held that you're glad they could do?
-- Good morning! 👂 What's something you heard recently that moved you, amused you, or made you feel something good?
-- Think of a time your body healed. What do you appreciate about that capacity?
-- Morning! 😴 What does a good night of sleep give you? When did you last feel genuinely rested?
-- What's something physical you can do now that you couldn't do at a younger or harder point in your life?
-- Good morning! 🏃 What's a form of movement — however small — that your body has been able to do recently that you appreciate?
-- Think of a time you were really sick or injured. What did recovering teach you about your body?
-- Morning! 🤲 What's something your hands regularly do for the people you love?
-- What's a physical capacity — balance, strength, coordination — you rarely think to be grateful for?
-- Good morning! 👃 What's a smell that immediately connects you to a good memory or feeling?
-- Think of your body at its most tired. What did it still manage to do?
-- Morning! 🧘 What does it feel like when your body is at rest and not in pain? Do you notice that feeling?
-- What's something about your physical form — the way it moves, what it can carry, how it feels — that you quietly appreciate?
-- Good morning! 🫀 What's one organ or system in your body that works constantly without any instruction from you?
-- Think of something physical you enjoy — eating, stretching, being outdoors. What's the body's role in that pleasure?
-- Morning! 🌬️ Take a slow breath right now. What does it feel like to have that capacity?
-- What's something your body does when you're stressed — a signal, a sensation — that you've come to recognize as useful information?
-- Good morning! 🪷 Is there something about how your body looks, moves, or works that you've been harder on than you needed to be?
-- Think of someone who has cared for your body — a doctor, a nurse, a parent — when you needed it. What are you grateful for?
-- Morning! 🔆 What's something your body is capable of today that it wasn't capable of a year ago?
-- What's a physical limitation you've worked with or around that has taught you something about adaptability?
+- Before you get up: take one slow breath and notice where your body feels at ease right now. What do you feel?
+- Morning! 🌿 What's one thing your body did yesterday that you took for granted — something it just handled?
+- Take 10 seconds. Close your eyes, breathe in, breathe out slowly. What do you notice in your chest or shoulders?
+- Good morning! What's the most physical thing you did yesterday — a walk, stairs, lifting something? What did it feel like to be able to do it?
+- Morning! Think of something your hands can do that someone once had to teach you. What is it?
+- What's something about your senses — sight, hearing, smell, taste, touch — that you leaned on today without noticing?
+- Good morning! 🛏️ Pause for a moment. Feel the weight of your body where you're sitting or lying. What's one thing you notice?
+- Morning! What's a way your body signals to you that it needs rest — and are you listening to it today?
+- Think of a physical experience from the last week that was just pleasant — warmth, cool air, a good stretch. What was it?
+- Good morning! What's something your body healed from or recovered from at some point — even something minor?
+- Morning! 🦶 Take three slow breaths right now. In through the nose, out through the mouth. What shifted?
+- What's a physical capacity — walking a certain distance, lifting, reaching — that you'd miss immediately if it were gone?
+- Good morning! What did you eat yesterday that your body probably needed? Did you notice it at the time?
+- Morning! What's a physical sensation you've experienced recently that was just simply good — nothing profound, just good?
+- Think of a time your body surprised you by being stronger or more capable than you expected. When was that?
+- Good morning! 🧘 Before you read anything else today: sit for one moment and just feel your feet on the floor. What's there?
+- Morning! What's something your body does automatically every day that would require extraordinary technology to replicate?
+- What's a physical activity you've done in the past week — any activity — that your body was built for?
+- Good morning! Think of a part of your body that you usually ignore but which is, right now, just doing its job. What do you notice?
+- Morning! 💤 What's something about how you slept last night — even imperfectly — that still served you?
+- What's a smell or taste that your body seems to respond to before your mind catches up?
+- Good morning! What's a small physical comfort you have access to today — a chair, a bed, warmth — that you didn't earn so much as inherit?
+- Morning! What's something you can do physically now that you couldn't do, or couldn't do as easily, a few years ago?
+- Take a slow breath and let your shoulders drop. Where in your body do you carry tension? Just notice it for a moment.
+- Good morning! What's one thing your body did right this week — something it managed, absorbed, or recovered from?
+- Morning! 🌅 Step outside or look out a window for 30 seconds. What does your body feel in the light or air?
+- What's a physical limitation you've adapted to in a way that you've started to take for granted?
+- Good morning! What's something your body has been telling you lately that you've mostly been ignoring?
+
 
 ## nature
 
-- Good morning! 🌻 What's a flower, plant, or tree near you that you've barely noticed but is quietly there?
-- Think of a place in nature you'd go to if you could be anywhere right now. What draws you there?
-- Morning! 🌙 What's something about the night sky — stars, the moon, darkness itself — that you find settling?
-- What's a season you're grateful for right now, even if it's not your favorite?
-- Good morning! 🌊 What's something about water — rain, a river, the ocean, a lake — that you appreciate?
-- Think of an animal you've encountered recently — a bird, an insect, a pet, something wild. What did you notice?
-- Morning! 🌤️ What does the quality of light do to a place you know well? Have you ever stopped to notice?
-- What's something about the natural world that still strikes you as genuinely strange and wonderful?
-- Good morning! 🍂 What's something about the season you're in right now — its smells, its light, its pace — that you appreciate?
-- Think of a natural sound that you find calming or beautiful — rain, wind, birdsong, silence itself.
-- Morning! 🌾 What's something about where you live that connects you to the natural world, even in a small way?
-- What's a natural phenomenon — tides, seasons, migration, growth — that reminds you of something larger than daily life?
-- Good morning! 🌿 What's something you've watched grow — a plant, a garden, a tree — that gave you quiet satisfaction?
-- Think of a time you were outdoors and felt genuinely present. Where were you? What did it feel like?
-- Morning! 🦋 What's a creature — insect, bird, animal — that you find quietly remarkable?
-- What's something about the sky today — its color, clouds, light — that's worth a second look?
-- Good morning! 🌄 What's the most beautiful sunrise or sunset you remember? What made it stand out?
-- Think of a time weather surprised you in a way you ended up appreciating.
-- Morning! 🍃 What sound — leaves, water, wind — has been present in your life lately that you haven't fully noticed?
-- What's something in nature that feels like it was put there just to be beautiful, with no other purpose?
-- Good morning! 🌱 What's something you've planted, tended, or helped grow?
-- Think of a time being outside changed your mood. What happened?
-- Morning! ❄️ What's something about cold weather, or a season you don't love, that you can find gratitude for?
-- What's a natural landscape — desert, forest, coastline, plains — that has stayed with you long after you left?
-- Good morning! 🐦 What bird, if you had to name one, do you have a soft spot for and why?
-- Think of a trail, path, park, or outdoor place that has been good to you.
-- Morning! 🌺 What's a plant or flower that you associate with a particular memory or person?
-- What's something about the sheer variety and abundance of the natural world that moves you when you really think about it?
+- Step outside or open a window for 30 seconds. What do you hear that you hadn't been paying attention to?
+- Good morning! 🌳 What's one tree, plant, or patch of green that you walk past regularly and have never really looked at?
+- Morning! What's the sky like right now — color, light, cloud — even through a window? Just notice it for a moment.
+- What's a natural feature of where you live that you'd bring up if someone asked what you like about the place?
+- Good morning! 🌿 What's something alive — a plant, a bird, an insect — that you've noticed in the last few days?
+- Stop for 10 seconds. Listen. What sounds in your environment come from something natural rather than human-made?
+- Morning! What's the last time you were somewhere with more nature than you're used to? What do you remember?
+- Good morning! 🌧️ What's a kind of weather — rain, fog, cold, heat — that you usually treat as a problem but could find something in?
+- Morning! What's a plant you've kept alive, or that grows near you without help, that you've stopped noticing?
+- Think of a place outdoors that you feel comfortable in. What specifically do you like about it?
+- Good morning! What's something about the season you're in right now that's actually good, even if it's not your favorite?
+- Morning! 🐦 Have you noticed any birds or animals near you recently? What were they doing?
+- What's a smell outside — earth, rain, cut grass, salt air — that stops you even briefly?
+- Good morning! What's one way the natural world near you has changed in the last few weeks?
+- Morning! Go to a window for a moment. What's one natural thing you can see from where you are?
+- What's something about where you live — geography, climate, light — that's a quiet background benefit?
+- Good morning! 🌙 What's something about nights where you are — stars, quiet, cool air — that you rarely notice?
+- Morning! Think of a place in nature that's within reach of where you live. When did you last go?
+- What's something that grows without anyone tending it near you — weeds, wildflowers, ivy — that's actually kind of remarkable?
+- Good morning! 🌊 What's a body of water — river, lake, ocean, even a fountain — near you that you rarely acknowledge?
+- Morning! What's the quality of light like right now where you are? Notice it for just a moment before you move on.
+- What's a natural thing that recurs every year — a season, a bloom, a migration — that you look forward to?
+- Good morning! What's the most recent moment you spent time outside without a specific purpose — just being there?
+- Morning! 🌱 What's one thing about the ground you walk on every day — soil, plants, roots under pavement — that quietly sustains things?
+- Think of a time you were struck by something in nature — a view, a sound, a moment — that you haven't thought about in a while.
+- Good morning! What's something about the natural environment near you that you benefit from without directly noticing?
+- Morning! What's an animal — wild or domestic — that crossed your path recently? What was it doing?
+- Good morning! 🌤️ Step outside or look out for 60 seconds. What's one thing you see that was here long before you were?
+
 
 ## creativity
 
-- Good morning! 🎨 What's something you've made with your hands that you were proud of, even if no one else saw it?
-- Think of a piece of music that has meant something to you at different points in your life. What does it mean to you now?
-- Morning! ✏️ What's something you used to make or create as a child that you look back on fondly?
-- What's a creative act — cooking, gardening, decorating, writing — that you engage in regularly without calling it "creative"?
-- Good morning! 📷 What image — a photo, a painting, a view — has stayed with you and why?
-- Think of a book that changed something about how you see things. What did it shift?
-- Morning! 🎭 What's the best live performance — music, theater, comedy, dance — you've ever seen?
-- What's something you've written — a letter, a message, a note — that you meant deeply?
-- Good morning! 🎵 What's a song lyric or piece of music that has felt like it was written for a specific moment in your life?
-- Think of something you built, assembled, or repaired. What was satisfying about it?
-- Morning! 🖼️ What's a work of art — in any medium — that moved you in a way you didn't expect?
-- What's a creative hobby or interest you've set aside that you'd like to return to?
-- Good morning! 📚 What's a character — from a book, show, or film — that has stayed with you and taught you something?
-- Think of a time you improvised something — a meal, a solution, a plan — and it worked.
-- Morning! 🎬 What film or show have you watched more than once? What keeps drawing you back?
-- What's something creative you wish you were better at? And what do you appreciate about engaging with it anyway?
-- Good morning! 🎤 What's a voice — a singer, a speaker, a storyteller — that you find genuinely moving?
-- Think of a place designed beautifully — a building, a room, a garden — that made you feel something.
-- Morning! 🧵 What's something someone made for you by hand that you treasure?
-- What's a creative discipline you've watched someone else pursue that you find genuinely admirable?
-- Good morning! 🌈 What colors do you find yourself drawn to, and why?
-- Think of a poem, lyric, or piece of writing that you've returned to more than once.
-- Morning! 🎸 What's a genre of music, art, or storytelling that you've grown to appreciate more over time?
-- What does making something — anything — do for how you feel, even temporarily?
-- Good morning! 📝 What's something you'd create if you had unlimited time and no worry about whether it was good?
-- Think of the most creative person you know personally. What do you appreciate about how they see the world?
-- Morning! 🎺 What's the first piece of music or art you remember loving as a child?
-- What's something about human creativity in general — that people make art, stories, music — that you find remarkable?
+- What's something you made recently — cooked, built, written, arranged — that turned out better than you expected?
+- Good morning! 🎨 What's a creative skill you have that you don't often think of as a skill?
+- Morning! When's the last time you made something for someone else — a meal, a gift, a message — that took real thought?
+- What's a creative project you've started, stopped, and come back to? What keeps pulling you back?
+- Good morning! What's something you've figured out how to do through trial and error — no instructions, just iteration?
+- Morning! ✏️ What's something you've written recently — even a text, a note, a list — that you put real care into?
+- What's a creative habit you have that other people might not think of as creative — organizing, rearranging, improvising?
+- Good morning! What's something you've made in the last year that still exists somewhere — an object, a photo, a recipe?
+- Morning! Think of a time you improvised and it worked. What was the situation?
+- What's something you enjoy making that has no practical purpose — just the making of it is the point?
+- Good morning! 🎶 What's a piece of music, art, or writing that someone else made that you keep coming back to?
+- Morning! What's a problem you solved recently in a way you're a little proud of?
+- Think of a creative skill you've developed slowly over a long time. Where did it start?
+- Good morning! What's something you're in the middle of creating right now — anything, any stage?
+- Morning! 🛠️ What's something you've repaired, adapted, or repurposed rather than replaced?
+- What's the last thing you made that someone else reacted to positively? What did that feel like?
+- Good morning! What's an idea you've had recently that surprised you a little?
+- Morning! What's something you've learned to do that involves your hands?
+- Think of a creative person in your life — not a famous one, just someone you know. What do you admire about how they make things?
+- Good morning! 📸 What's an image, photo, or visual memory from the last week that sticks with you?
+- Morning! What's something you've made where the process was better than the result?
+- What's a creative thing you did as a kid that you haven't thought about in a while?
+- Good morning! What's something you created that didn't work the first time? What did you change?
+- Morning! 🎭 What's something you know how to do from scratch — bake, build, play, draw — that most people don't?
+- What's a creative act you've been putting off that you'd feel lighter for having done?
+- Good morning! What's one way you made your surroundings a bit more your own — anything from a rearranged room to a chosen mug?
+- Morning! What's something you made a long time ago that you still have or that still exists somewhere?
+- Good morning! What would you make or create today if you had two free hours and no audience?
+
 
 ## memory
 
-- Good morning! 🌅 What's your earliest happy memory? What makes it stay with you?
-- Think of a summer from your past that you remember fondly. What made it good?
-- Morning! 🎄 What's a holiday or celebration memory that holds a lot of warmth?
-- What's the last time you laughed until you cried? What happened?
-- Good morning! 🏠 What's something about a childhood home or neighborhood you're grateful to have known?
-- Think of a road trip, journey, or adventure you took. What made it memorable?
-- Morning! 🎓 What's something from school — a teacher, a moment, a friendship — that you carry with you?
-- What's a smell, sound, or taste that instantly takes you somewhere from your past?
-- Good morning! 👟 What's something from your younger years that you're glad you did, even if it scared you at the time?
-- Think of a mentor or elder who shaped you. What's one piece of wisdom you're grateful they passed on?
-- Morning! 🌃 What's a night out — a concert, a dinner, a spontaneous adventure — that you still think about?
-- What's a conversation you had that changed something in how you saw yourself or the world?
-- Good morning! 🎁 What's a gift — not necessarily physical — that someone gave you that you've never forgotten?
-- Think of a time you felt completely carefree. How old were you? Where were you?
-- Morning! 📷 What's a photo you love that captures something real about a person or time?
-- What's something from your past that you didn't appreciate enough at the time, but do now?
-- Good morning! 🌊 Think of a place you visited once that you'd love to go back to. What do you miss about it?
-- What's a tradition from your upbringing that you've kept — or that you're glad you knew, even if you haven't?
-- Morning! 🎵 What's a song that takes you somewhere specific in your memory the moment you hear it?
-- Think of an ordinary day from your past — nothing special — that you'd still love to have back.
-- Good morning! 🤣 What's something genuinely funny from your past that still makes you laugh?
-- What's a book you read at exactly the right moment in your life?
-- Morning! 🌿 What's something from your childhood that you thought everyone had, but later realized was particular to you?
-- Think of a teacher who saw something in you that you didn't yet see in yourself.
-- Good morning! 🌟 What's your happiest memory from the past year?
-- Think of a friendship from a different chapter of your life. What do you appreciate about having had it?
-- Morning! 🧡 What's something about where you grew up that shaped your values in a way you're grateful for?
-- What's a moment you were just fully present — not thinking about anything else — that you can still feel when you think about it?
+- What's a memory from childhood that comes back to you regularly — not dramatic, just specific?
+- Good morning! What's something from your past that, looking back, was better than you knew at the time?
+- Morning! Think of a place you've lived or spent a lot of time in. What do you miss about it?
+- What's a conversation from the past that you still think about — one that shaped how you see something?
+- Good morning! What's a tradition or ritual from your family or upbringing that you've carried forward in some form?
+- Morning! 📷 What's a photo you have — on your phone or somewhere — that you love looking at?
+- Think of a teacher, coach, or mentor from your past. What's one specific thing they did or said that stayed with you?
+- Good morning! What's something from your past that felt hard at the time but that you're glad happened?
+- Morning! What's a meal, smell, or song that takes you straight back to a specific place or time?
+- What's something you used to do regularly that you don't do anymore but genuinely enjoyed?
+- Good morning! 🏡 What's a place from your past — a house, a neighborhood, a landscape — that still feels like home in your memory?
+- Morning! Think of a person who isn't in your life the same way anymore. What do you remember best about them?
+- What's something you learned from a grandparent or older relative that you carry with you?
+- Good morning! What's a book, film, or piece of music that was important to you at a particular time in your life? What made it matter then?
+- Morning! 🌅 What's a trip or time away that stands out in your memory — not because it was perfect, but because of how it felt?
+- What's something you accomplished a long time ago that you rarely give yourself credit for anymore?
+- Good morning! What's a small, ordinary moment from your past — not an event, just a moment — that you're glad you remember?
+- Morning! Think of a friendship from an earlier chapter of your life. What do you remember most?
+- What's something your parents or caregivers did that you didn't appreciate at the time but do now?
+- Good morning! 📚 What's something you knew how to do as a kid or teenager that you no longer do?
+- Morning! What's an experience from your twenties (or your younger years) that fundamentally changed how you see something?
+- Think of a moment when you felt most like yourself — not a peak moment, just recognizably you.
+- Good morning! What's something about where you grew up that shaped you more than you usually acknowledge?
+- Morning! What's a gift — not bought, but given through time or attention — that you received at some point and still remember?
+- What's a hard time in your past that you got through? What does it feel like to be on the other side of it?
+- Good morning! What's an older memory that surfaced recently — something you hadn't thought about in a while?
+- Morning! 🌠 What's something you experienced that you'd want to preserve — not in a photo, but in writing — before it fades?
+- Good morning! What's something about the life you've already lived that you don't give yourself enough credit for?
+
 
 ## kindness
 
-- Good morning! 🤍 What's a small kindness you extended to a stranger recently, even something tiny?
-- Think of a time someone went out of their way for you when they didn't have to. What did it mean?
-- Morning! 🫶 Who in your life models generosity in a way that you find quietly inspiring?
-- What's a kind act you've done this week — however small — that you'd normally not give yourself credit for?
-- Good morning! 🌸 Think of the most generous person you know. What makes their generosity feel genuine?
-- What's something someone said to you that was kind at exactly the right moment?
-- Morning! 💐 What's an act of service — something you do to help others — that you find meaningful?
-- Think of a time someone trusted you with something important. What did that trust mean?
-- Good morning! 🕊️ What's a way you show care for people in your life that you rarely think of as kindness, but actually is?
-- Think of the last time you held a door, let someone go first, or offered help unprompted. What was it like?
-- Morning! 🌼 What's a kind thing you regularly do for someone you love that they might not fully notice?
-- Who is someone who has been patient with you in a way you're genuinely grateful for?
-- Good morning! 💌 When did you last write or say something that you knew would mean something to the person who received it?
-- Think of a community or volunteer effort you've contributed to. What did participating give you?
-- Morning! 🫂 What's something someone did for you during a hard time that you'll never forget?
-- What's a way you've been kind to yourself recently, even imperfectly?
-- Good morning! 🌻 Think of a moment of unexpected kindness from a stranger. What happened?
-- What's a cause or community you care about, and what does caring about it say about your values?
-- Morning! 💛 Who has been kind to someone you love, and made you feel gratitude on their behalf?
-- What's a way you've been more patient, gentle, or understanding recently than you might have been before?
-- Good morning! 🤲 What's something you can give freely — time, attention, encouragement — that costs you little but means a lot to others?
-- Think of a kind thing someone did for you that you passed forward in some way.
-- Morning! 🌺 What's the most thoughtful gift — physical or otherwise — you've ever received?
-- What does it feel like after you do something genuinely kind, without expecting anything back?
-- Good morning! 🧡 Who in your life do you try to be a little kinder to, because they need it or deserve it?
-- Think of a difficult person in your life whom you've found a way to have compassion for anyway.
-- Morning! 🌷 What's a way you express kindness that feels distinctive to you — your particular way of caring?
-- What's something kind someone has done for you that you've been meaning to properly acknowledge?
+- When's the last time someone was patient with you? What did that actually look like?
+- Good morning! Think of something kind that was done for you recently that you haven't fully acknowledged, even internally.
+- Morning! What's something small you did for someone recently that probably mattered more than you know?
+- Who in your life is consistently generous with their time? What does that cost them?
+- Good morning! 🌸 When's the last time a stranger was kind to you — held a door, gave directions, smiled? What was the moment?
+- Morning! What's something someone said to you recently that was kinder than it needed to be?
+- Think of a time you were given the benefit of the doubt. Who gave it, and what did it change?
+- Good morning! What's something you've done for someone recently that you did without expecting anything back?
+- Morning! Who in your life shows up consistently — not dramatically, just reliably — in ways that make your life easier?
+- What's a small kindness you witnessed recently — not directed at you, just something you saw?
+- Good morning! 💛 What's something you could do for someone today that would take you five minutes but might mean something to them?
+- Morning! Think of someone who was kind to you during a difficult time. What specifically did they do?
+- What's an act of kindness you received years ago that you still remember? What made it stick?
+- Good morning! Is there something kind you've been meaning to do for someone — a note, a call, a small gesture — that you've put off?
+- Morning! What's a way someone in your life shows care that you rarely name out loud?
+- Think of something you were kind about to yourself recently. What was it?
+- Good morning! 🫶 What's something nice someone said about you — even offhandedly — that you held onto?
+- Morning! When did someone recently make something easier for you without being asked?
+- What's something you know how to do that you've offered to help someone with?
+- Good morning! Think of a person who is consistently warm with other people. What does that look like in practice?
+- Morning! What's something you received this week — attention, time, a favor — that you didn't ask for but needed?
+- Who is someone in your life who notices things — who picks up on when you're struggling or when something's off?
+- Good morning! What's a kind thing you've told yourself recently that you'd also say to a friend?
+- Morning! What's a way you've shown up for someone else lately that you haven't given yourself credit for?
+- What's something you did for someone that they may not have fully noticed but that you know made a difference?
+- Good morning! 🌼 When did someone extend grace to you — let something go, or give you another chance?
+- Morning! What's a small act of care you've built into your daily routine for someone else?
+- Good morning! What's one person in your life who makes you feel like you don't have to perform or explain yourself?
+
 
 ## hope
 
-- Good morning! 🌱 What's something you're nurturing right now — a plan, a relationship, a skill — that you hope will grow?
-- Think of something you've been slowly working toward. What does reaching it mean to you?
-- Morning! 🌅 What's a new beginning — a move, a job, a relationship, a habit — that you're hopeful about?
-- What's something about the next season of life that you're genuinely looking forward to?
-- Good morning! ⭐ What's a dream you haven't given up on, even if you haven't talked about it in a while?
-- Think of someone whose future you're excited about. What do you hope for them?
-- Morning! 🌈 What's the most optimistic thing you believe about the world right now?
-- What's something you'd like to try — an experience, a skill, a place — that you still fully intend to?
-- Good morning! 🚀 What's something you're looking forward to this week, even something small?
-- Think of a goal you've set that requires patience. What keeps you holding onto it?
-- Morning! 💡 What's an idea you have — for your life, your work, or the world — that you find genuinely exciting?
-- What's something you hope for someone you love that you haven't told them?
-- Good morning! 🎯 What's one thing you'd like to be able to say you did by the end of this year?
-- Think of a problem — in your life or the wider world — where you still feel there's reason for hope.
-- Morning! 🌟 What's a possibility that feels just out of reach but not impossible?
-- What's something you've been putting off starting that you'd feel better once you began?
-- Good morning! 🌻 What's something your future self would thank your present self for doing today?
-- Think of a time hope turned out to be justified. What does that tell you about holding onto it now?
-- Morning! 🏡 What does the life you're working toward look like, in even rough terms?
-- What's a conversation you're looking forward to having — with someone you miss, admire, or love?
-- Good morning! 🌙 What's something small you can do today that moves you a little closer to something that matters to you?
-- Think of a change you've been part of that took longer than expected but was worth it.
-- Morning! 🌊 What's something you're not sure you can do, but suspect you probably can?
-- What's a version of your life that felt out of reach once but is now closer or already here?
-- Good morning! 🎶 What's a hope you have for the relationships in your life — how they grow, deepen, or continue?
-- Think of a time uncertainty resolved in your favor. How did it affect your relationship with uncertainty since?
-- Morning! 🌺 What's something you genuinely believe is getting better — in your life or the world — even gradually?
-- What's one small thing happening today that you can choose to see as the beginning of something?
+- What's something you're genuinely looking forward to in the next few weeks — even something small?
+- Good morning! What's one thing you're working toward right now that matters to you?
+- Morning! What's something that's getting better in your life, even slowly?
+- What's something you'd like to do or try in the next year that you haven't started yet?
+- Good morning! 🌱 What's something you're building — a habit, a skill, a relationship — that you can see growing?
+- Morning! Who's someone in your life whose future you feel genuinely hopeful about?
+- What's a change you made to your life that's playing out better than you expected?
+- Good morning! What's something in the wider world that gives you a bit of hope when you pay attention to it?
+- Morning! What's something you're curious about right now — something you want to know more about?
+- What's a goal that used to feel distant that feels more possible than it did a year ago?
+- Good morning! 🌅 What's something you're looking forward to that's already on the calendar?
+- Morning! What's one thing you've been meaning to start that you could take a first small step toward this week?
+- What's something that's changed in the last year — in your life, in your community — that's a genuine improvement?
+- Good morning! What's something you've been wanting to do with someone specific — a trip, a meal, a conversation?
+- Morning! What's a project or idea you've been thinking about that's slowly becoming clearer?
+- Think of something you're learning right now. How far have you come since you started?
+- Good morning! 🌟 What's something you hope to be true about your life five years from now that's within reach?
+- Morning! What's something you're optimistic about that other people in your life might not be?
+- What's an improvement you've been working toward — in yourself or your circumstances — that's starting to show?
+- Good morning! What's something in the world you find yourself reading about with genuine interest and optimism?
+- Morning! What's something that felt impossible a few years ago that's now part of your ordinary life?
+- What's something you have to look forward to this week, even if it's modest?
+- Good morning! 🌤️ What's a small sign recently — a conversation, a development, a feeling — that something is moving in a good direction?
+- Morning! What's a possibility that's been quietly exciting you lately?
+- What's something you want to do before the year is out? What would make it happen?
+- Good morning! Who's someone younger in your life whose generation gives you genuine hope?
+- Morning! What's a skill or capacity you're developing right now that future-you will be glad you worked on?
+- Good morning! What's something you believed wasn't possible for you that you've since proven wrong?
+
 
 ## accomplishment
 
-- Good morning! 🎓 What's a skill you have now that took real time and effort to build?
-- Think of something you made work despite obstacles. What did making it work require of you?
-- Morning! 🏆 What's something you've achieved that you initially thought might be beyond you?
-- What's a professional or personal milestone you've reached that you rarely stop to actually appreciate?
-- Good morning! 🔧 What's something you fixed, solved, or figured out that you're quietly proud of?
-- Think of a project you completed that required sustained effort. What was most satisfying about finishing it?
-- Morning! 📊 What's something you know how to do now that would have impressed your ten-year-old self?
-- What's something you've gotten noticeably better at in the last few years, even if there's still room to grow?
-- Good morning! 🌟 What's a standard you hold yourself to — a value, a work ethic, a quality — that you're genuinely proud of?
-- Think of a decision you made that required real courage. What did making it take?
-- Morning! 💼 What's something you've contributed to — at work or in your community — that had a real impact, even if it wasn't recognized?
-- What's a language, tool, system, or domain you've developed real competence in?
-- Good morning! 🚗 What's something you can navigate — literally or figuratively — with ease that once felt overwhelming?
-- Think of a time you went beyond what was asked of you. What drove that?
-- Morning! 🏅 What's something you've persisted with long enough that it became a real strength?
-- What's a habit you've built that has genuinely improved your quality of life?
-- Good morning! 📐 What's something you've organized, streamlined, or improved that others benefit from?
-- Think of something you taught someone — a skill, a lesson, a way of doing something.
-- Morning! 🎯 What's a goal you set and actually followed through on, even when it was hard?
-- What's something you know more deeply than most people around you — knowledge you've built deliberately?
-- Good morning! 🏗️ What's something you built — a team, a routine, a relationship, a project — that you're proud of how it came together?
-- Think of a mistake you made, owned, and recovered from. What did that process develop in you?
-- Morning! 📖 What's something you've read, studied, or learned that has genuinely changed how you operate?
-- What's a version of yourself — more capable, more confident, more skilled — that is closer to who you are now than five years ago?
-- Good morning! 🌱 What's something you're still building toward that you're proud to be in the middle of?
-- Think of a time someone thanked you or credited you for something you'd done. What had you contributed?
-- Morning! 🔑 What's a skill or capacity that opens doors for you — something you can do that gives you access or options?
-- What's something you've accomplished that matters more to you than to anyone else — because you know what it took?
+- What's something you finished recently — fully finished — that you haven't stopped to acknowledge?
+- Good morning! What's one thing you did last week that was harder than it looked to anyone watching?
+- Morning! What's a skill you have now that required real effort to build — one you take for granted?
+- What's something you completed recently that had been sitting unfinished for a while?
+- Good morning! 🏆 What's something you're better at than most people who haven't put in the time you have?
+- Morning! What's a small victory from this week — something that counts even if no one else noticed?
+- Think of something you built over a long time — a practice, a relationship, a body of knowledge. What does it look like now?
+- Good morning! What's something you've been persistent about that's starting to pay off?
+- Morning! What's a decision you made that was right, even though it was hard at the time?
+- What's something you helped someone else accomplish recently?
+- Good morning! What's a professional or practical skill you have that you rarely give yourself credit for?
+- Morning! What's the hardest thing you finished this month — not the biggest, just the one that took the most out of you?
+- Think of something you learned to do well through repetition and failure. When did it start to click?
+- Good morning! ✅ What's something on your list that you've actually been making progress on lately?
+- Morning! What's a goal you set for yourself — any size — that you actually followed through on?
+- What's something you got through this year that you weren't sure you could?
+- Good morning! What's a role or responsibility in your life that you handle more capably than you give yourself credit for?
+- Morning! What's a problem you solved recently — at work, at home, anywhere — that required real thought?
+- Think of something you know how to do from start to finish that took a long time to learn.
+- Good morning! What's something you completed this week — even a single task — that's genuinely done?
+- Morning! 🎯 What's an area of your life where you've made real, sustained progress over the last year?
+- What's something about how you manage your life that's working better than it used to?
+- Good morning! What's something you stuck with longer than felt comfortable — and what came of it?
+- Morning! What's something you've produced, created, or built that you could point to and say: I made that?
+- What's a habit you've maintained — not perfectly, but consistently — that you're quietly proud of?
+- Good morning! What's something you did this week that required courage, even if the stakes were small?
+- Morning! What's the last thing you accomplished that someone else benefited from?
+- Good morning! What's a long-term effort you're in the middle of right now that you'd want future-you to know you didn't give up on?
+
 
 ## awe
 
-- Good morning! 🌋 Have you ever stood near something geologically ancient — a canyon, a volcano, a mountain range? What was it like to feel that scale?
-- Think of the deepest water you've ever been in or near. What did that depth feel like in the moment?
-- Morning! 🌌 What's the farthest you've ever been able to see — across a plain, from a mountain, over an ocean? What did that horizon do to you?
-- What's something about the human body — its complexity, its scale, its chemistry — that genuinely astonishes you?
-- Good morning! 🌑 What's something about darkness — a cave, a night without light, deep space — that you find profound?
-- Think of a time you were in a crowd of thousands of people all feeling the same thing. What was that like?
-- Morning! 🌁 Have you ever been in fog or mist so thick you couldn't see ahead? What did that feel like?
-- What's something about the scale of time — geological, historical, cosmic — that reshapes your sense of your own life when you sit with it?
-- Good morning! 🌊 What's the most powerful weather you've experienced — a storm, lightning, heavy snow? What did it make you feel?
-- Think of something in nature that's been alive far longer than you — a forest, a tortoise, a coral reef. What does that longevity feel like to sit with?
-- Morning! 🔬 What's something about the very small — cells, atoms, DNA — that you find astonishing?
-- What's something about the number of people alive right now — or who have ever lived — that shifts your perspective?
-- Good morning! 🗻 What's the highest point you've ever stood? What did elevation do to your sense of things?
-- Think of a time you were surrounded by a sound so immense — waves, a stadium, a thunderstorm — that you felt physically small in it.
-- Morning! 🌿 What's something about evolution — how life has changed and diversified — that strikes you as extraordinary?
-- What's something about the age of the universe that you struggle to fully comprehend but find beautiful in its incomprehensibility?
-- Good morning! 🪸 Have you ever snorkeled, dived, or looked into a tide pool and been struck by what exists just below the surface?
-- Think of a piece of architecture — a cathedral, a bridge, a skyline — that made you feel the scale of human ambition.
-- Morning! 🏜️ Have you ever been somewhere truly empty — a desert, a tundra, open ocean — where human presence felt genuinely rare?
-- What's something about the fact that you exist at all — that all the conditions had to be just right — that moves you?
-- Good morning! ⚡ Have you ever watched lightning up close? What was it like to feel both the power and the beauty?
-- Think of a time you looked through a telescope or microscope and saw something you hadn't expected.
-- Morning! 🐳 What's the largest living thing you've ever encountered up close? What did scale feel like in that moment?
-- What's something about mathematics or physics — an equation, a proof, a pattern in nature — that strikes you as beautiful?
-- Good morning! 🌏 What's something about the fact that earth is a small planet in one of billions of galaxies that you find settling rather than alarming?
-- Think of a place where the geology is visible — layers of rock, a cliff face, a gorge. What does reading that kind of time feel like?
-- Morning! 🔭 What's something about deep space — its scale, its emptiness, its age — that gives you perspective on your daily concerns?
-- What's the most awe-inspiring thing you've ever heard described — by a scientist, a traveler, or someone who'd seen something you haven't?
+- Step outside or look up at the sky for a moment. What's there — clouds, light, stars, anything? What do you notice?
+- Good morning! 🌌 What's something you've learned about how the world works that still seems improbable to you?
+- Morning! What's the largest thing you've stood near recently — a building, a mountain, a body of water? What did it feel like to be next to it?
+- What's something that exists because of an enormous, improbable chain of events — something you benefit from every day?
+- Good morning! When did something recently catch you off-guard in a good way — a view, a sound, an unexpected moment of beauty?
+- Morning! What's something about the universe — its size, its age, its workings — that genuinely stops you when you think about it?
+- What's something in ordinary life — a process, a material, a technology — that's actually extraordinary when you slow down and think about it?
+- Good morning! 🌠 Think of the last time you looked at a night sky. What did you feel?
+- Morning! What's something you've witnessed in nature that made you feel small in a good way?
+- What's a piece of music that's moved you in a way that's hard to explain? What did it feel like in your body?
+- Good morning! What's something humans have made — a bridge, a piece of art, a building, a piece of music — that strikes you as genuinely remarkable?
+- Morning! What's something about how living things work — growth, healing, reproduction, communication — that seems almost impossible even though it's ordinary?
+- Stop for a moment. You are a conscious mind that exists, right now, in an incomprehensibly large universe. What's that like to sit with for a second?
+- Good morning! 🌍 What's something about where you live on this planet — its geography, its history, its climate — that's actually astonishing?
+- Morning! What's something you've read or heard recently that genuinely expanded how you see something?
+- What's a time you saw something that made you want to stop and just look for a while?
+- Good morning! What's the oldest thing you've ever touched or stood near? What did it feel like to be in contact with something that old?
+- Morning! 🌋 What's a natural process — weather, tides, seasons, erosion — that you've seen at work and that reminds you how much was here before us?
+- What's a moment in the past year where you felt connected to something larger than your own life?
+- Good morning! What's something simple and immediate — light through a window, the sound of rain, a flame — that, if you look at it long enough, becomes strange and beautiful?
+- Morning! What's something about the human body — yours or in general — that seems improbable or remarkable when you actually think about it?
+- Think of a time you witnessed something being made or built from nothing. What did you feel watching it?
+- Good morning! 🔭 What's a piece of scientific knowledge — something you learned at any point in your life — that changed how you see something?
+- Morning! What's the most beautiful thing you've seen in the last week? Not the most important — just the most beautiful.
+- What's something you'd describe as miraculous — not in a religious sense, just in the sense of being almost unbelievably good?
+- Good morning! What's a time when being somewhere specific — a place, a landscape, a building — changed how you were feeling just by being there?
+- Morning! What's something that exists right now — in your life, in the world — that simply would not have existed fifty years ago?
+- Good morning! 🌅 When did you last feel genuinely amazed by something? What was it?
+
 
 ## purpose
 
-- Good morning! 🧭 What draws you out of bed most mornings — not obligation, but something you genuinely care about?
-- Think of the work you do — paid or unpaid. What part of it feels most aligned with who you are?
-- Morning! 🌱 What's something you contribute to that would be slightly worse without you?
-- What's a value you hold — honesty, fairness, connection, creativity — that quietly shapes the choices you make?
-- Good morning! 🕯️ What do you want people to feel when they spend time with you?
-- Think of something you do that you'd continue even if no one praised you for it. What is it?
-- Morning! 🌻 What's a problem in the world — large or small — that you genuinely care about?
-- What's a role you play — parent, friend, colleague, neighbor — that feels most central to who you are?
-- Good morning! 🗺️ What would you be doing if money and status weren't factors? How close are you to that?
-- Think of someone whose life is a little better because of how you show up. Who comes to mind?
-- Morning! 💡 What's something you believe that most people around you might not — something about how life should be lived?
-- What's a way you give back — formally or informally — that feels like it belongs to who you are?
-- Good morning! 🌟 What do you hope someone says about you at the end of your life — not your achievements, but your character?
-- Think of a moment when you felt you were doing exactly what you were meant to be doing. What were you doing?
-- Morning! 🔑 What's a strength you have that the world doesn't always know how to use, but that you know matters?
-- What's something you teach others — formally or just by how you live — that you're glad you can pass on?
-- Good morning! 🫱 What would you regret not having done if this were your last decade?
-- Think of a cause, community, or project that feels like it belongs to your story, not just your schedule.
-- Morning! 🌿 What's something you do that connects you to something larger than yourself?
-- What's a belief you hold about how people should treat each other that you actually try to live by?
-- Good morning! 🎯 What are you trying to build — in your life, your community, or your work — that will outlast you?
-- Think of a time you chose meaning over convenience. What did you choose and why?
-- Morning! 🛤️ In what part of your life do you feel most alive — most connected to what you actually care about?
-- What's something you're doing now that future generations in your family might benefit from?
-- Good morning! 🌊 What's a legacy — however modest — that you're quietly working toward?
-- Think of a time you said yes to something that aligned with your values even though it was harder than saying no.
-- Morning! 🌺 What would it look like to live a day in complete alignment with what you actually believe matters?
-- What's something about your life right now that you'd point to and say: this is why I do what I do?
+- What's something you do regularly that makes a difference to at least one other person?
+- Good morning! What's something you care about that you could name — not vaguely, but specifically?
+- Morning! Think of a role you play in someone's life — parent, friend, colleague, neighbor. What does it ask of you?
+- What's something you're doing now that you think will matter in five years — to you or to someone else?
+- Good morning! 🧭 What's something you've given time or energy to recently that felt worth it?
+- Morning! What's something you believe that shapes how you make decisions, even if you've never said it out loud?
+- Think of a time you helped someone work through something hard. What did you contribute?
+- Good morning! What's something you've sacrificed or traded for something that mattered more to you?
+- Morning! What's a cause or concern — big or small — that you actually care about enough to do something about?
+- What's one thing you'd want people to say about you — not at a funeral, just in general?
+- Good morning! 🌿 What's something you do in your daily life that connects to something bigger than the task itself?
+- Morning! What's a project or responsibility you've taken on that challenged you to be more than you thought you were?
+- What's something you want for the people you care about most? What are you actually doing toward it?
+- Good morning! What's a value you hold that you've been tested on recently — one you had to actually choose?
+- Morning! What's something you know from experience that you could offer someone who's earlier in that journey?
+- Think of a contribution you've made — to a family, a team, a community — that no one formally recognized but that mattered.
+- Good morning! 🌟 What's something you do that serves a purpose beyond your own comfort or convenience?
+- Morning! What's something in your life that, when you're doing it, you feel most like yourself?
+- What's a problem in the world that you care about and that you've done something about, however small?
+- Good morning! What's something you've been trusted with that you take seriously — a relationship, a responsibility, a piece of knowledge?
+- Morning! What's a decision you made that was based on what was right rather than what was easy?
+- What's something you've taught someone — formally or not — that they've carried with them?
+- Good morning! 🔑 What's something you have that others in different circumstances don't, and what do you do with it?
+- Morning! What's a role you've grown into over time that now fits you in a way it didn't at first?
+- What's something you're working toward that isn't just for you?
+- Good morning! What's something you believe is worth protecting — in your life, in your community, in the world?
+- Morning! What's a way you contribute that's become so routine you've stopped seeing it as a contribution?
+- Good morning! What's something you're doing now — even imperfectly — that aligns with who you want to be?
+
 
 ## self_compassion
 
-- Good morning! 🌸 What's something you're carrying right now that deserves more patience and gentleness than you're giving it?
-- Think of something you're hard on yourself about. What would you say to a close friend who felt the same way about themselves?
-- Morning! 🌿 What's something you did this week that was good enough — even if it wasn't perfect?
-- What's an imperfection in yourself that you've come to accept, or are learning to accept?
-- Good morning! 💛 What's something you've been through that deserves acknowledgment, even if you've been trying to just move past it?
-- Think of a mistake you've made that you've punished yourself for longer than was fair. Is it time to let it go?
-- Morning! 🫂 When was the last time you were genuinely kind to yourself — not as a task, but as a real choice?
-- What's something you need right now — rest, connection, encouragement — that you've been slow to give yourself?
-- Good morning! 🌱 What's something about who you are that you've come to appreciate after once being unsure of it?
-- Think of a season in your life when you were doing the best you could with what you had. What do you want that version of you to know?
-- Morning! 🌼 What's something about your life that you'd celebrate in a friend but tend to minimize in yourself?
-- What would change if you trusted yourself a little more this week?
-- Good morning! 🕊️ What's one way you've grown that you haven't fully acknowledged yet?
-- Think of something you say to yourself when things go wrong. Is that the voice you'd want speaking to someone you love?
-- Morning! ☀️ What's something you do well that you rarely give yourself credit for?
-- What's a version of yourself you've been critical of — a past mistake, a hard period — that might deserve more compassion?
-- Good morning! 💙 What does it feel like when someone is genuinely patient with you? Can you offer that to yourself today?
-- Think of something you've improved at — even incrementally — that you've dismissed because it wasn't fast enough.
-- Morning! 🌻 What's something about where you are in life that is actually okay, even if it's not where you imagined?
-- What would you stop — what habit of self-criticism — if you decided, just for today, to be a little gentler?
-- Good morning! 🤍 What's a fear about yourself that has turned out to be less true than you once believed?
-- Think of something you've survived that proves you're more resilient than you give yourself credit for.
-- Morning! 🌅 What would it mean to start today not from a place of what you should be, but from appreciation for what you already are?
-- What's something you do for others, almost automatically, that you rarely extend toward yourself?
-- Good morning! 🌸 What's a need you have that you've been calling weakness but is actually just being human?
-- Think of one thing — just one — you genuinely like about yourself today.
-- Morning! 🌿 What would a day look like if you moved through it with the same patience you'd offer your closest friend?
-- What's something you've been waiting to feel ready for that maybe you're already ready for, just as you are?
+- What's something you've been hard on yourself about lately that you'd let go of entirely if a friend told you the same story?
+- Good morning! What's one thing you did this week that was genuinely good, that you've already moved past without registering?
+- Morning! What's something you're carrying right now that you didn't choose and can't fully control?
+- Think of something you've been criticizing yourself for. Is that standard the one you'd apply to someone you care about?
+- Good morning! 🌱 What's something you're still learning — a skill, a habit, a way of being — that deserves patience?
+- Morning! What's something your body or mind needed recently that you actually gave it?
+- What's a mistake you made that you've already paid for — in time, in effort, in embarrassment — but that you're still charging yourself for?
+- Good morning! What's something you do to take care of yourself that works, even if it's small or imperfect?
+- Morning! What would you say to a close friend who was in the exact situation you're in right now?
+- What's one thing about yourself — a trait, a way of moving through the world — that you can see as a strength even if others have named it a flaw?
+- Good morning! 💛 What's something you've been doing consistently that deserves acknowledgment, even if no one else has given it?
+- Morning! What's a need you have that's legitimate and that you've been treating as an inconvenience?
+- Think of a version of yourself from a hard period — a year ago, five years ago. What would you want that person to know?
+- Good morning! What's something you've been struggling with that, honestly, most people would struggle with too?
+- Morning! What's something you've done recently that you'd call "good enough," and what would it take to actually accept that?
+- What's a way you've changed in the last few years that you rarely acknowledge as growth?
+- Good morning! 🌸 What's something you're dealing with that you'd have more compassion for if it were someone else?
+- Morning! What do you need today — not what you should want, but what you actually need?
+- What's something you've let yourself off the hook for lately, rightly so?
+- Good morning! What's a limitation you have that you've been treating as a character flaw rather than just a human constraint?
+- Morning! When did you last give yourself credit for something without immediately hedging or adding a "but"?
+- What's something about your life right now that's genuinely hard, that you've been minimizing?
+- Good morning! What's a standard you hold yourself to that you'd never expect of anyone else?
+- Morning! 🧘 What's something you could do today that would be genuinely kind to yourself — not a treat, just kind?
+- What's something you've been ashamed of that, on reflection, you don't actually think is shameful?
+- Good morning! What's something you did recently in a difficult moment that showed real character — even if it went unnoticed?
+- Morning! What's one thing you've been avoiding acknowledging about yourself that's actually good?
+- Good morning! What's something you're forgiving yourself for, slowly? What would it look like to speed that up just a little?
 
