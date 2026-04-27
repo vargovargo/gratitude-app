@@ -215,10 +215,23 @@ function getAllStreaks() {
   `).all();
 }
 
+function getMembersWithActivity() {
+  return db.prepare(`
+    SELECT m.id, m.name, m.phone, m.timezone, m.preferred_time,
+           m.onboarding_complete, m.created_at,
+           s.current_streak, s.longest_streak, s.last_response_date
+    FROM members m
+    LEFT JOIN streaks s ON m.id = s.member_id
+    WHERE m.active = 1
+    ORDER BY m.name
+  `).all();
+}
+
 module.exports = {
   normalizePhone,
   getMemberByPhone,
   getAllActiveMembers,
+  getMembersWithActivity,
   addMember,
   updateMember,
   deactivateMember,

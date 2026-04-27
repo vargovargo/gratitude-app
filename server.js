@@ -247,6 +247,153 @@ app.post('/send-reminders', requireAuth, async (req, res) => {
   }
 });
 
+// ─── Admin: Dashboard ─────────────────────────────────────────────────────────
+
+app.get('/admin', requireAuth, (req, res) => {
+  const token   = req.query.token || '';
+  const added   = req.query.added || '';
+  const removed = req.query.removed || '';
+  const err     = req.query.err   || '';
+
+  const members = db.getMembersWithActivity();
+  const now     = Date.now();
+
+  const MESSAGE_PAUSE_DAYS  = parseInt(process.env.MESSAGE_PAUSE_DAYS  || '10', 10);
+  const REMINDER_PAUSE_DAYS = parseInt(process.env.REMINDER_PAUSE_DAYS || '7',  10);
+
+  function daysSince(member) {
+    const ref = member.last_response_date ?? member.created_at.slice(0, 10);
+    return Math.floor((now - new Date(ref + 'T12:00:00')) / 86400000);
+  }
+
+  function statusBadge(member) {
+    if (!member.onboarding_complete) return '<span class="badge badge-pending">Onboarding</span>';
+    const days = daysSince(member);
+    if (days > MESSAGE_PAUSE_DAYS) return '<span class="badge badge-paused">Paused</span>';
+    if (days > REMINDER_PAUSE_DAYS) return '<span class="badge badge-quiet">No reminders</span>';
+    return '<span class="badge badge-active">Active</span>';
+  }
+
+  function esc(s) { return String(s || '').replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c])); }
+
+  const rows = members.map(m => {
+    const days = daysSince(m);
+    const lastResp = m.last_response_date || '—';
+    const daysCell = days > MESSAGE_PAUSE_DAYS
+      ? `<span class="days-paused">${days}d</span>`
+      : days > REMINDER_PAUSE_DAYS
+        ? `<span class="days-quiet">${days}d</span>`
+        : `${days}d`;
+    return `
+      <tr>
+        <td>${esc(m.name)}</td>
+        <td class="mono">${esc(m.phone)}</td>
+        <td>${esc(m.timezone.replace('America/', '').replace('Pacific/', '').replace('Europe/', ''))}</td>
+        <td class="mono">${esc(m.preferred_time)}</td>
+        <td>${esc(lastResp)}</td>
+        <td>${daysCell}</td>
+        <td>${m.current_streak ?? 0}</td>
+        <td>${statusBadge(m)}</td>
+        <td>
+          <form method="POST" action="/admin/deactivate/${esc(m.id)}?token=${encodeURIComponent(token)}"
+                onsubmit="return confirm('Remove ${esc(m.name)}?')">
+            <button class="btn-remove" type="submit">Remove</button>
+          </form>
+        </td>
+      </tr>`;
+  }).join('');
+
+  res.type('text/html').send(`<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gratitude Admin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 900px; margin: 32px auto; padding: 0 20px; color: #222; }
+    h1 { font-size: 1.4rem; margin-bottom: 0.1rem; }
+    h2 { font-size: 1rem; font-weight: 600; margin: 2rem 0 0.75rem; border-top: 1px solid #e5e5e5; padding-top: 1.5rem; }
+    .flash-ok  { background: #e6f4ea; border: 1px solid #4a7c59; border-radius: 6px; padding: 10px 14px; margin-bottom: 1rem; color: #2d5a3d; font-weight: 600; }
+    .flash-err { background: #fdecea; border: 1px solid #c0392b; border-radius: 6px; padding: 10px 14px; margin-bottom: 1rem; color: #922b21; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin-bottom: 0.5rem; }
+    th { text-align: left; padding: 7px 10px; border-bottom: 2px solid #ddd; color: #555; font-weight: 600; white-space: nowrap; }
+    td { padding: 7px 10px; border-bottom: 1px solid #eee; vertical-align: middle; }
+    tr:last-child td { border-bottom: none; }
+    .mono { font-family: ui-monospace, monospace; font-size: 0.82rem; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; white-space: nowrap; }
+    .badge-active   { background: #e6f4ea; color: #2d5a3d; }
+    .badge-pending  { background: #fff3cd; color: #856404; }
+    .badge-quiet    { background: #fff3cd; color: #856404; }
+    .badge-paused   { background: #f5f5f5; color: #888; }
+    .days-quiet  { color: #b06d00; font-weight: 600; }
+    .days-paused { color: #aaa; }
+    .btn-remove { background: none; border: 1px solid #ddd; border-radius: 4px; padding: 3px 10px; font-size: 0.8rem; color: #c0392b; cursor: pointer; white-space: nowrap; }
+    .btn-remove:hover { background: #fdecea; border-color: #c0392b; }
+    .legend { font-size: 0.78rem; color: #888; margin-bottom: 1.5rem; }
+    label { display: block; font-weight: 600; margin-bottom: 0.25rem; font-size: 0.9rem; }
+    input, select { width: 100%; padding: 10px 12px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 1rem; }
+    .btn-add { width: 100%; padding: 12px; background: #4a7c59; color: #fff; font-size: 1rem; font-weight: 600; border: none; border-radius: 6px; cursor: pointer; }
+    .btn-add:active { background: #3a6349; }
+    .form-wrap { max-width: 440px; }
+  </style>
+</head>
+<body>
+  <h1>🌿 Gratitude Admin</h1>
+  ${added   ? `<div class="flash-ok">&#10003; ${esc(added)} added &mdash; welcome SMS sent.</div>` : ''}
+  ${removed ? `<div class="flash-ok">&#10003; ${esc(removed)} removed.</div>` : ''}
+  ${err     ? `<div class="flash-err">&#9888; ${esc(err)}</div>` : ''}
+
+  <h2>Members (${members.length})</h2>
+  ${members.length === 0 ? '<p style="color:#888">No active members yet.</p>' : `
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Phone</th><th>TZ</th><th>Time</th>
+        <th>Last response</th><th>Days since</th><th>Streak</th><th>Status</th><th></th>
+      </tr>
+    </thead>
+    <tbody>${rows}</tbody>
+  </table>
+  <p class="legend">
+    Days shown in <span style="color:#b06d00;font-weight:600">amber</span> = reminders paused (&gt;${REMINDER_PAUSE_DAYS}d).
+    <span style="color:#aaa">Grey</span> = all messages paused (&gt;${MESSAGE_PAUSE_DAYS}d).
+  </p>`}
+
+  <h2>Add a member</h2>
+  <div class="form-wrap">
+    <form method="POST" action="/admin/add-member?token=${encodeURIComponent(token)}">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required autocomplete="name" placeholder="First name">
+      <label for="phone">Phone number</label>
+      <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+1 555 000 0000">
+      <label for="timezone">Timezone</label>
+      <select id="timezone" name="timezone">
+        <option value="America/Los_Angeles">Pacific (LA)</option>
+        <option value="America/Denver">Mountain (Denver)</option>
+        <option value="America/Chicago">Central (Chicago)</option>
+        <option value="America/New_York">Eastern (New York)</option>
+        <option value="America/Anchorage">Alaska</option>
+        <option value="Pacific/Honolulu">Hawaii</option>
+        <option value="Europe/London">UK (London)</option>
+      </select>
+      <button class="btn-add" type="submit">Add member &rarr;</button>
+    </form>
+  </div>
+</body>
+</html>`);
+});
+
+app.post('/admin/deactivate/:id', requireAuth, (req, res) => {
+  const token = req.query.token || '';
+  const id    = parseInt(req.params.id, 10);
+  const members = db.getMembersWithActivity();
+  const member  = members.find(m => m.id === id);
+  db.deactivateMember(id);
+  const name = member?.name || 'Member';
+  res.redirect(`/admin?token=${encodeURIComponent(token)}&removed=${encodeURIComponent(name)}`);
+});
+
 // ─── Admin: Add member form (token via query param — bookmarkable) ────────────
 
 app.get('/admin/add-member', requireAuth, (req, res) => {
@@ -304,7 +451,7 @@ app.post('/admin/add-member', requireAuth, async (req, res) => {
   const timezone = (req.body.timezone || 'America/Los_Angeles').trim();
 
   if (!name || !phone) {
-    return res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&err=Name+and+phone+are+required`);
+    return res.redirect(`/admin?token=${encodeURIComponent(token)}&err=Name+and+phone+are+required`);
   }
 
   try {
@@ -313,10 +460,10 @@ app.post('/admin/add-member', requireAuth, async (req, res) => {
 
     await sendWelcomeSMS(normalizedPhone, name);
 
-    res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&added=${encodeURIComponent(name)}`);
+    res.redirect(`/admin?token=${encodeURIComponent(token)}&added=${encodeURIComponent(name)}`);
   } catch (err) {
     const msg = err.message.includes('UNIQUE') ? 'That phone number is already registered' : err.message;
-    res.redirect(`/admin/add-member?token=${encodeURIComponent(token)}&err=${encodeURIComponent(msg)}`);
+    res.redirect(`/admin?token=${encodeURIComponent(token)}&err=${encodeURIComponent(msg)}`);
   }
 });
 
