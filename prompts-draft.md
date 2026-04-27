@@ -1,93 +1,12 @@
-# Gratitude Prompts
+# Prompt Draft — 13 Themes × 28 Prompts
 
-Add or remove prompts by editing this file. Each prompt must be on its own line starting with `- `.
-The app picks one prompt per day, cycling through the full list.
+Review, reword, or remove any prompt that doesn't feel right.
+Each section heading shows the theme key used in the code.
+When ready, let me know and I'll integrate into `prompts.md` and `promptThemeMap`.
 
-## Morning Prompts
+---
 
-- Good morning! 🌅 What's one thing you're grateful for today?
-- Rise and shine! ✨ Name something that made you smile recently.
-- Morning! 🌸 What's a small blessing you noticed this week?
-- Good morning! 🌻 Who is someone you're thankful to have in your life?
-- Happy morning! 🌈 What's something you're looking forward to today?
-- Good morning! ☀️ What's a gift in your life you sometimes take for granted?
-- Morning! 🍃 What's something beautiful you've noticed lately?
-- Good morning! 💫 What's a recent moment that brought you peace?
-- Rise and shine! 🌺 What's something your body can do that you're grateful for?
-- Good morning! 🙏 What's a memory you're grateful to have?
-- Morning! 🌟 What challenge recently taught you something valuable?
-- Good morning! 🦋 What simple pleasure are you most thankful for?
-- Happy morning! 🌊 What's something about your home you're grateful for?
-- Good morning! 🎵 What skill or ability are you glad you have?
-- Morning! 🌙 What happened yesterday that you're grateful for?
-- Good morning! 🍀 Who made a positive difference in your life this week?
-- Rise and shine! 🌠 What's something about nature you appreciate?
-- Good morning! 🕊️ What kindness did someone show you lately?
-- Morning! 💝 What did you accomplish recently that makes you proud?
-- Good morning! 🌴 What opportunity are you grateful to have right now?
-- Happy morning! 🍵 What everyday comfort are you especially grateful for?
-- Good morning! 📚 What did you learn recently that enriched your life?
-- Morning! 🏡 What do you love most about your daily routine?
-- Good morning! 🤝 What friendship or relationship are you thankful for today?
-- Rise and shine! 🎯 What's one thing about today's fresh start you appreciate?
-- Good morning! 🌻 What difficulty helped you grow into who you are?
-- Morning! 🦋 What do you see every day but rarely stop to appreciate?
-- Good morning! 💎 What personal quality in yourself are you grateful for?
-- Happy morning! 🌈 What made you laugh this week?
-- Good morning! 🌅 As a new day begins, what are you most thankful for?
-- Close your eyes and notice one thing you appreciate with your other senses — what is it?
-- Think of one person you haven't seen in over a year. What are you grateful for about them?
-- What's the best thing that happened to you yesterday?
-- Is there a stranger who once did something kind for you that you still remember? What happened?
-- What's one part of your body that works hard for you that you rarely thank?
-- Think of a difficult period in your life. What did it teach you or give you that you're grateful for now?
-- What's something you own that genuinely makes your daily life easier or better?
-- Think back to your childhood home or neighborhood. What's one thing from that place you feel grateful for?
-- What's a meal, flavor, or food that you truly love? What do you appreciate about it?
-- Is there someone who believed in you before you believed in yourself? Who comes to mind?
-- What's something in nature — a tree, a view, the sky — that you're glad exists?
-- Think of a book, song, film, or piece of art that has meant something to you. What's one thing you're grateful it gave you?
-- What's a decision you made — big or small — that you're genuinely glad you made?
-- Name one thing about where you live that you appreciate, even if you don't notice it every day.
-- What's a quiet moment from the past week that felt good, even if it was brief?
-- Is there someone in your life who shows up reliably, no matter what? What do you value about them?
-- What's one thing about your work or daily routine that you actually enjoy?
-- Think of a season or type of weather you love. What do you appreciate about it?
-- What's something you can do now that you couldn't do five years ago?
-- What's one small act of kindness you gave to someone recently? How did it feel?
-- What's a habit or practice — however small — that's been good for you?
-- Think of someone who has passed away. What's one thing about them you carry with you and are grateful for?
-- What's something you were worried about that turned out okay? What does that tell you?
-- What's a tool, app, or piece of technology that genuinely helps your life?
-- Think about your five senses. Which one are you most grateful for today, and why?
-- What's something simple you did for yourself recently that was good for you?
-- What's a place — anywhere in the world — that you're glad you've been to or that exists?
-- What's one thing you're looking forward to, even if it's small?
-- Who in your life makes hard things feel easier? What do you appreciate about how they show up?
-
-## Awe Reflection Prompts
-
-- Good morning! 🌌 What's the most vast or enormous thing you've ever stood in front of — ocean, mountain, canyon? What was it like?
-- Morning! 🏔️ Think of the most awe-inspiring place you've ever been. What made it feel so immense?
-- What's something in the sky — a storm, a sunset, a starry night — that has ever stopped you in your tracks?
-- Good morning! 🌊 When did you last feel the sheer scale of nature? What were you looking at?
-- Morning! 🌀 What's something beautiful or strange that genuinely surprised you recently — something that made you stop and think?
-- Good morning! ✨ What's a fact about the universe, nature, or life that still amazes you when you think about it?
-- What's something you used to take for granted that, once you really thought about it, turned out to be astonishing?
-- Morning! 🔭 Has a place, experience, or idea ever changed the way you see the world, even a little? What was it?
-- Good morning! 🌿 When did you last feel small in a way that felt good — like your worries shrank because something larger was around you?
-- Think of a moment when your everyday concerns suddenly seemed smaller. What were you seeing or experiencing?
-- Morning! 🌠 What's something so big or ancient that it made your daily life feel less heavy for a moment?
-- Good morning! 🪐 Have you ever looked at the night sky and felt your sense of self quietly shrink — in a peaceful way? What was that like?
-- Morning! 🕊️ When did you last feel genuinely connected to the world around you — nature, strangers, or something larger? What happened?
-- Good morning! 🌍 What's one thing that reminds you that you're part of something much bigger than your own life?
-- Think of a time you felt unexpected kinship with people you didn't know — at an event, in a crowd, or watching something unfold. What was it?
-- Morning! 🌱 What's something in nature — an animal, a tree, a season — that makes you feel connected to something beyond yourself?
-- Good morning! ⚡ When did you last get goosebumps from something beautiful — a piece of music, a view, a story? What was it?
-- Morning! 🫀 What's the last thing that made time feel like it slowed down — where you were just fully present? What were you doing?
-- Good morning! 😮 What's the last thing that made your jaw drop or gave you chills in a good way?
-
-## New Prompts
+## simple_pleasures
 
 - Good morning! 🫖 What's a small ritual that makes your mornings feel a little better?
 - What's a scent that instantly makes you feel at home or at ease?
@@ -117,6 +36,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! 🛁 What's a small comfort that helps you recharge or unwind?
 - What's a small pleasure you've had in the last 24 hours that you've already moved past without fully registering?
 - What's something you have access to today — a place, a person, a comfort — that you'd feel the absence of immediately if it were gone?
+
+
+## relationships
+
 - Think of someone you spoke to yesterday — even briefly. What did you appreciate about that exchange?
 - Who's someone you could call right now if you really needed to? What does it mean to have that?
 - Good morning! 💬 What's something a specific person in your life has said that you still think about?
@@ -145,6 +68,10 @@ The app picks one prompt per day, cycling through the full list.
 - Think of the last time someone made you feel genuinely welcomed or included. Who was it?
 - Good morning! 🌟 What's something you genuinely like about someone you find difficult?
 - Morning! Who's someone you'd describe as generous — not just with money, but with time, attention, or patience?
+
+
+## resilience
+
 - Think of something hard you've already gotten through. What did you find out about yourself from it?
 - What's something you handled in the last month that you weren't sure you could?
 - Good morning! What's a worry you had six months ago that turned out okay — or that you've just learned to live with?
@@ -173,6 +100,10 @@ The app picks one prompt per day, cycling through the full list.
 - Morning! 🔧 What's a practical skill or resource you have that you built up over time without fully noticing?
 - What's a time you changed your mind about something important? What shifted?
 - Good morning! What's something you've made peace with that used to take up more of your energy?
+
+
+## body
+
 - Before you get up: take one slow breath and notice where your body feels at ease right now. What do you feel?
 - Morning! 🌿 What's one thing your body did yesterday that you took for granted — something it just handled?
 - Take 10 seconds. Close your eyes, breathe in, breathe out slowly. What do you notice in your chest or shoulders?
@@ -201,6 +132,10 @@ The app picks one prompt per day, cycling through the full list.
 - Morning! 🌅 Step outside or look out a window for 30 seconds. What does your body feel in the light or air?
 - What's a physical limitation you've adapted to in a way that you've started to take for granted?
 - Good morning! What's something your body has been telling you lately that you've mostly been ignoring?
+
+
+## nature
+
 - Step outside or open a window for 30 seconds. What do you hear that you hadn't been paying attention to?
 - Good morning! 🌳 What's one tree, plant, or patch of green that you walk past regularly and have never really looked at?
 - Morning! What's the sky like right now — color, light, cloud — even through a window? Just notice it for a moment.
@@ -229,6 +164,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's something about the natural environment near you that you benefit from without directly noticing?
 - Morning! What's an animal — wild or domestic — that crossed your path recently? What was it doing?
 - Good morning! 🌤️ Step outside or look out for 60 seconds. What's one thing you see that was here long before you were?
+
+
+## creativity
+
 - What's something you made recently — cooked, built, written, arranged — that turned out better than you expected?
 - Good morning! 🎨 What's a creative skill you have that you don't often think of as a skill?
 - Morning! When's the last time you made something for someone else — a meal, a gift, a message — that took real thought?
@@ -257,6 +196,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's one way you made your surroundings a bit more your own — anything from a rearranged room to a chosen mug?
 - Morning! What's something you made a long time ago that you still have or that still exists somewhere?
 - Good morning! What would you make or create today if you had two free hours and no audience?
+
+
+## memory
+
 - What's a memory from childhood that comes back to you regularly — not dramatic, just specific?
 - Good morning! What's something from your past that, looking back, was better than you knew at the time?
 - Morning! Think of a place you've lived or spent a lot of time in. What do you miss about it?
@@ -285,6 +228,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's an older memory that surfaced recently — something you hadn't thought about in a while?
 - Morning! 🌠 What's something you experienced that you'd want to preserve — not in a photo, but in writing — before it fades?
 - Good morning! What's something about the life you've already lived that you don't give yourself enough credit for?
+
+
+## kindness
+
 - When's the last time someone was patient with you? What did that actually look like?
 - Good morning! Think of something kind that was done for you recently that you haven't fully acknowledged, even internally.
 - Morning! What's something small you did for someone recently that probably mattered more than you know?
@@ -313,6 +260,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! 🌼 When did someone extend grace to you — let something go, or give you another chance?
 - Morning! What's a small act of care you've built into your daily routine for someone else?
 - Good morning! What's one person in your life who makes you feel like you don't have to perform or explain yourself?
+
+
+## hope
+
 - What's something you're genuinely looking forward to in the next few weeks — even something small?
 - Good morning! What's one thing you're working toward right now that matters to you?
 - Morning! What's something that's getting better in your life, even slowly?
@@ -341,6 +292,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! Who's someone younger in your life whose generation gives you genuine hope?
 - Morning! What's a skill or capacity you're developing right now that future-you will be glad you worked on?
 - Good morning! What's something you believed wasn't possible for you that you've since proven wrong?
+
+
+## accomplishment
+
 - What's something you finished recently — fully finished — that you haven't stopped to acknowledge?
 - Good morning! What's one thing you did last week that was harder than it looked to anyone watching?
 - Morning! What's a skill you have now that required real effort to build — one you take for granted?
@@ -369,6 +324,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's something you did this week that required courage, even if the stakes were small?
 - Morning! What's the last thing you accomplished that someone else benefited from?
 - Good morning! What's a long-term effort you're in the middle of right now that you'd want future-you to know you didn't give up on?
+
+
+## awe
+
 - Step outside or look up at the sky for a moment. What's there — clouds, light, stars, anything? What do you notice?
 - Good morning! 🌌 What's something you've learned about how the world works that still seems improbable to you?
 - Morning! What's the largest thing you've stood near recently — a building, a mountain, a body of water? What did it feel like to be next to it?
@@ -397,6 +356,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's a time when being somewhere specific — a place, a landscape, a building — changed how you were feeling just by being there?
 - Morning! What's something that exists right now — in your life, in the world — that simply would not have existed fifty years ago?
 - Good morning! 🌅 When did you last feel genuinely amazed by something? What was it?
+
+
+## purpose
+
 - What's something you do regularly that makes a difference to at least one other person?
 - Good morning! What's something you care about that you could name — not vaguely, but specifically?
 - Morning! Think of a role you play in someone's life — parent, friend, colleague, neighbor. What does it ask of you?
@@ -425,6 +388,10 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's something you believe is worth protecting — in your life, in your community, in the world?
 - Morning! What's a way you contribute that's become so routine you've stopped seeing it as a contribution?
 - Good morning! What's something you're doing now — even imperfectly — that aligns with who you want to be?
+
+
+## self_compassion
+
 - What's something you've been hard on yourself about lately that you'd let go of entirely if a friend told you the same story?
 - Good morning! What's one thing you did this week that was genuinely good, that you've already moved past without registering?
 - Morning! What's something you're carrying right now that you didn't choose and can't fully control?
@@ -453,3 +420,4 @@ The app picks one prompt per day, cycling through the full list.
 - Good morning! What's something you did recently in a difficult moment that showed real character — even if it went unnoticed?
 - Morning! What's one thing you've been avoiding acknowledging about yourself that's actually good?
 - Good morning! What's something you're forgiving yourself for, slowly? What would it look like to speed that up just a little?
+
