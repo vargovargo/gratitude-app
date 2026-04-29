@@ -92,71 +92,81 @@ function requireAuth(req, res, next) {
 // ─── Twilio SMS Webhook ───────────────────────────────────────────────────────
 
 app.post('/webhook/sms', validateTwilio, async (req, res) => {
-  const fromPhone   = req.body.From  || '';
-  const messageBody = (req.body.Body || '').trim();
-  const date        = getTodayDate();
+  try {
+    const fromPhone   = req.body.From  || '';
+    const messageBody = (req.body.Body || '').trim();
+    const date        = getTodayDate();
 
-  // Look up the sender before logging message content
-  const member = db.getMemberByPhone(fromPhone);
-  if (!member) {
-    console.log(`[Webhook] SMS from unrecognized number ${fromPhone} — ignored`);
-    return res.type('text/xml').send('<Response></Response>');
-  }
+    // Look up the sender before logging message content
+    const member = db.getMemberByPhone(fromPhone);
+    if (!member) {
+      console.log(`[Webhook] SMS from unrecognized number ${fromPhone} — ignored`);
+      return res.type('text/xml').send('<Response></Response>');
+    }
 
-  console.log(`[Webhook] SMS from ${fromPhone}: "${messageBody}"`);
+    console.log(`[Webhook] SMS from ${fromPhone}: "${messageBody}"`);
 
-  // ── Onboarding: member hasn't set their preferred time yet ──────────────────
-  if (!member.onboarding_complete) {
-    const parsed = parseTimeInput(messageBody);
-    if (parsed) {
-      db.setPreferredTime(member.id, parsed);
-      const display = formatTime12h(parsed);
-      return res.type('text/xml').send(
-        buildTwiML(`Perfect! You'll get your daily gratitude prompt at ${display}. Can't wait to hear what you're grateful for! 🌅`)
-      );
+    // ── Onboarding: member hasn't set their preferred time yet ──────────────────
+    if (!member.onboarding_complete) {
+      const parsed = parseTimeInput(messageBody);
+      if (parsed) {
+        db.setPreferredTime(member.id, parsed);
+        const display = formatTime12h(parsed);
+        return res.type('text/xml').send(
+          buildTwiML(`Perfect! You'll get your daily gratitude prompt at ${display}. Can't wait to hear what you're grateful for! 🌅`)
+        );
+      } else {
+        return res.type('text/xml').send(
+          buildTwiML(
+            `Hmm, I didn't catch that! Reply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\nOr type any time like "10am" or "8:30am".`
+          )
+        );
+      }
+    }
+
+    // Ensure a daily entry exists (handles edge case where morning send failed)
+    db.ensureDailyEntry(member.id, date);
+    const entry = db.getTodayEntry(member.id, date);
+
+    if (!entry) {
+      console.error(`[Webhook] No daily entry found for member ${member.id} on ${date} after ensureDailyEntry`);
+      return res.type('text/xml').send(buildTwiML(getRandomPositiveResponse()));
+    }
+
+    const alreadyResponded = entry.response != null;
+
+    // Save the response (first one wins; subsequent ones are still saved as updates)
+    db.saveResponse(member.id, messageBody, date);
+
+    // Update streak and get the new count
+    const updatedStreak = db.updateStreak(member.id, date);
+    const streakCount   = updatedStreak?.current_streak ?? 1;
+
+    // Build an encouraging reply, paired to the type of gratitude the prompt invited
+    let reply = getPromptPairedResponse(entry.prompt);
+
+    // For very short replies (≤ 3 words), 50% chance to append a gentle nudge
+    // inviting more detail. Combine if it fits; otherwise show nudge alone.
+    if (!alreadyResponded && messageBody.trim().split(/\s+/).length <= 3 && Math.random() < 0.5) {
+      const nudge = getShortResponseNudge();
+      const combined = reply + '\n\n' + nudge;
+      reply = combined.length <= 320 ? combined : nudge;
+    }
+
+    if (!alreadyResponded) {
+      const milestone = getStreakMessage(streakCount);
+      if (milestone) {
+        reply += `\n\n${milestone}`;
+      }
     } else {
-      return res.type('text/xml').send(
-        buildTwiML(
-          `Hmm, I didn't catch that! Reply:\n1 for 8:00 AM\n2 for 9:00 AM\n3 for 7:00 AM\n\nOr type any time like "10am" or "8:30am".`
-        )
-      );
+      reply = "Thanks for the extra gratitude! 🌟 Your positive energy is contagious!";
     }
+
+    res.type('text/xml').send(buildTwiML(reply));
+  } catch (err) {
+    console.error('[Webhook] Unhandled error:', err.message, err.stack);
+    res.type('text/xml').send('<Response></Response>');
   }
-
-  // Ensure a daily entry exists (handles edge case where morning send failed)
-  db.ensureDailyEntry(member.id, date);
-  const entry = db.getTodayEntry(member.id, date);
-
-  const alreadyResponded = entry?.response != null;
-
-  // Save the response (first one wins; subsequent ones are still saved as updates)
-  db.saveResponse(member.id, messageBody, date);
-
-  // Update streak and get the new count
-  const updatedStreak = db.updateStreak(member.id, date);
-  const streakCount   = updatedStreak?.current_streak ?? 1;
-
-  // Build an encouraging reply, paired to the type of gratitude the prompt invited
-  let reply = getPromptPairedResponse(entry.prompt);
-
-  // For very short replies (≤ 3 words), 50% chance to append a gentle nudge
-  // inviting more detail. Combine if it fits; otherwise show nudge alone.
-  if (!alreadyResponded && messageBody.trim().split(/\s+/).length <= 3 && Math.random() < 0.5) {
-    const nudge = getShortResponseNudge();
-    const combined = reply + '\n\n' + nudge;
-    reply = combined.length <= 320 ? combined : nudge;
-  }
-
-  if (!alreadyResponded) {
-    const milestone = getStreakMessage(streakCount);
-    if (milestone) {
-      reply += `\n\n${milestone}`;
-    }
-  } else {
-    reply = "Thanks for the extra gratitude! 🌟 Your positive energy is contagious!";
-  }
-
-  res.type('text/xml').send(buildTwiML(reply));
 });
 
 // ─── Admin API: Members ───────────────────────────────────────────────────────
